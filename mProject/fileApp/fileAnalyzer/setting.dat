@@ -1,0 +1,14 @@
+DIGI               ['0'2'9']
+NUMBER             ['-'][DIGI+]|[DIGI+]|['-'][DIGI+]['.'][DIGI+]|[DIGI+]['.'][DIGI+]
+CAP_ALPHA          ['A'2'Z']
+LOW_ALPHA          ['a'2'z']
+CAP_VOWEL          ['A'|'E'|'I'|'O'|'U']
+LOW_VOWEL          ['a'|'e'|'i'|'o'|'u']
+CAP_CONSON         [CAP_ALPHA-CAP_VOWEL]
+LOW_CONSON         [LOW_ALPHA-LOW_VOWEL]
+ALPHA              LOW_ALPHA|CAP_ALPHA
+CONSON             [ALPHA]-[CAP_VOWEL|LOW_VOWEL]
+WORD               [ALPHA+]
+VAR                ['_'+][WORD][NUMBER+]|[WORD][NUMBER]
+
+

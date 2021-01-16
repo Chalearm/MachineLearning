@@ -1,0 +1,24 @@
+http://gnosis.cx/publish/programming/sockets.html
+http://www.cs.rpi.edu/~moorthy/Courses/os98/Pgms/socket.html
+http://www.cs.rpi.edu/~moorthy/Courses/os98/Pgms/client.c
+http://www.tutorialspoint.com/unix_sockets/socket_server_example.htm
+http://www.thegeekstuff.com/2011/12/c-socket-programming/
+http://stackoverflow.com/questions/9164848/how-to-use-select-and-fd-set-in-socket-programming
+http://stackoverflow.com/questions/12625224/can-someone-give-me-an-example-of-how-select-is-alerted-to-an-fd-becoming-rea
+http://www.gnu.org/software/libc/manual/html_node/Server-Example.html
+http://www.gnu.org/software/libc/manual/html_node/Inet-Example.html#Inet-Example
+http://www.gnu.org/software/libc/manual/html_node/Waiting-for-I_002fO.html#Waiting-for-I_002fO
+https://www.google.co.th/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=kill+thread+linux+c%2B%2B
+http://www.thegeekstuff.com/2012/04/terminate-c-thread/
+http://stackoverflow.com/questions/2084830/kill-thread-in-pthread-library
+http://stackoverflow.com/questions/3822674/for-pthread-how-to-kill-child-thread-from-the-main-thread
+
+http://www.binarytides.com/multiple-socket-connections-fdset-select-linux/
+ 
+ http://www.lowtek.com/sockets/select.html
+ 
+ good
+
+ http://www.wangafu.net/~nickm/libevent-book/01_intro.html
+ 
+ https://banu.com/blog/2/how-to-use-epoll-a-complete-example-in-c/

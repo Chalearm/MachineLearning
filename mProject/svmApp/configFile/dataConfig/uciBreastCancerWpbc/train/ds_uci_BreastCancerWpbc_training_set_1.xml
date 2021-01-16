@@ -1,0 +1,23 @@
+<INPUT>
+    <FILE type="0"><!-- 0 = training set 1 = testSet -->
+        <NAME_FILE io="2">wpbc.data</NAME_FILE> <!-- io =0 input only, 1 output(label) only, 2 is Io -->
+        <NUM_SAMPLE>90</NUM_SAMPLE>
+        <CONVERT_METHOD>  <!-- 0 string to int, 1 string to double, 2 map table, 3 random(double) 4 random(int) -->
+            <!-- *****for input which cannot regconizes,the sample is rejected immediately -->
+            <METHOD>1</METHOD> <!-- default method -->
+            <ATTRB method="2" no="1">
+                <WORD value="-1">R</WORD>
+                <WORD value="1">N</WORD>
+            </ATTRB>
+        </CONVERT_METHOD>
+        <SYMBOL>
+            <LINE_START>0</LINE_START>
+            <ORDER_ATTRB_START>1</ORDER_ATTRB_START>
+            <IO_START>1</IO_START> <!--Optional tag use it when io=2 read 0 Input before output, 1 output before input -->
+            <START_OUT>-1</START_OUT>
+            <STOP_OUT>,</STOP_OUT>
+            <START_INP>-1</START_INP>
+            <STOP_INP>,</STOP_INP>
+        </SYMBOL>
+    </FILE>
+</INPUT>

@@ -1,0 +1,22 @@
+<ROOT>
+    <SYMBOLS>
+ 
+        <SYM  id="1" old="include" new="increase"/>
+ 
+    </SYMBOLS>
+    <FILES>
+        <!--FILE name="Makefile_temp" output="Makefile"/-->
+        <FILE name="a.a" output="b.b"/>
+    </FILES>
+</ROOT>
+
+<!-- special symbol 
+
+    &quot =  "
+    &perc = %
+    &amp = &
+    &apos = '
+    &lt = <
+    &gt= >
+
+-->

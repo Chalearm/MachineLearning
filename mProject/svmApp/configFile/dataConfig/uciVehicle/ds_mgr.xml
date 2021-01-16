@@ -1,0 +1,59 @@
+<DS_SPACE>
+    <NUM_CLASS>4</NUM_CLASS>
+    <NUM_ATTRB>18</NUM_ATTRB>
+    <NUM_ATTRB_OUTPUT>1</NUM_ATTRB_OUTPUT>
+    <CURRENT_PATH>dataConfig/uciVehicle</CURRENT_PATH>
+    <TRAINING_FILE>
+        <FILE> <!-- can add it as a node of the list -->
+            <NAME>uci_vehicle_training_set_1</NAME>
+            <PATH>train/ds_uci_Vehicle_training_set_1.xml</PATH>
+        </FILE>
+        <FILE> <!-- can add it as a node of the list -->
+            <NAME>uci_vehicle_training_set_2</NAME>
+            <PATH>train/ds_uci_Vehicle_training_set_2.xml</PATH>
+        </FILE>
+        <FILE> <!-- can add it as a node of the list -->
+            <NAME>uci_vehicle_training_set_3</NAME>
+            <PATH>train/ds_uci_Vehicle_training_set_3.xml</PATH>
+        </FILE>
+        <FILE> <!-- can add it as a node of the list -->
+            <NAME>uci_vehicle_training_set_4</NAME>
+            <PATH>train/ds_uci_Vehicle_training_set_4.xml</PATH>
+        </FILE>
+        <FILE> <!-- can add it as a node of the list -->
+            <NAME>uci_vehicle_training_set_5</NAME>
+            <PATH>train/ds_uci_Vehicle_training_set_5.xml</PATH>
+        </FILE>
+        <FILE> <!-- can add it as a node of the list -->
+            <NAME>uci_vehicle_training_set_6</NAME>
+            <PATH>train/ds_uci_Vehicle_training_set_6.xml</PATH>
+        </FILE>
+    </TRAINING_FILE>
+    <TESTING_FILE>
+        <FILE> <!-- can add it as a node of the list -->
+            <NAME>uci_vehicle_testing_set_1</NAME>
+            <PATH>test/ds_uci_Vehicle_testing_set_1.xml</PATH>
+        </FILE>
+        <FILE> <!-- can add it as a node of the list -->
+            <NAME>uci_vehicle_testing_set_2</NAME>
+            <PATH>test/ds_uci_Vehicle_testing_set_2.xml</PATH>
+        </FILE>
+        <FILE> <!-- can add it as a node of the list -->
+            <NAME>uci_vehicle_testing_set_3</NAME>
+            <PATH>test/ds_uci_Vehicle_testing_set_3.xml</PATH>
+        </FILE>
+        <FILE> <!-- can add it as a node of the list -->
+            <NAME>uci_vehicle_testing_set_4</NAME>
+            <PATH>test/ds_uci_Vehicle_testing_set_4.xml</PATH>
+        </FILE>
+        <FILE> <!-- can add it as a node of the list -->
+            <NAME>uci_vehicle_testing_set_5</NAME>
+            <PATH>test/ds_uci_Vehicle_testing_set_5.xml</PATH>
+        </FILE>
+        <FILE> <!-- can add it as a node of the list -->
+            <NAME>uci_vehicle_testing_set_6</NAME>
+            <PATH>test/ds_uci_Vehicle_testing_set_6.xml</PATH>
+        </FILE>
+    </TESTING_FILE>
+    <SOURCE_PATH>SVM_ALL_STAR/DataSet/UCI/Vehicle Silhouettes Data Set</SOURCE_PATH> <!-- path directory which keep training and testing data set -->
+</DS_SPACE>

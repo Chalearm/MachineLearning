@@ -1,0 +1,70 @@
+#User manual guide How to use AVLTree 
+
+
+example :
+
+struct ABC
+{
+   ...
+};
+
+Data:
+struct XYZ
+{
+    ...
+};
+
+        binaryTree avlT;
+        
+        // 1 is has data
+        // 0 is not has data
+        constructAvlTree(&avlT,1,"custom type 2",0,sizeof(struct ABC)); 
+        
+        setDelKeyAndDelDataAndCompFnForAvlTree(&avlT,delKey,delData,compareKey);
+        
+        
+        setDelKeyFnForAvlTree(obj,NULL); // if key is not deallocate
+        
+        avlT.insertFn(&avlT,&key); // key is pointer only
+        setDataToAvlNode(avlT->root,&data); // data is pointer only
+        clearBinaryTree(&avlT);
+ void delKey(void *key)
+ {
+    struct ABC **kAbc = (struct ABC**)key;
+    
+    ...
+    
+    free(*kAbc);
+    *kAbc = NULL;
+ }        
+ void delData(void *data)
+ {
+    struct XYZ **dXyz = (struct XYZ**)data;
+    
+    free(*dXyz);
+    *dXyz = NULL;
+ }
+ 
+ int compareKey(const void* a,const void* b)
+ {
+        struct ABC **a1 = (struct ABC**)a;
+        struct ABC **b1 = (struct ABC**)b;
+        
+        ....
+ }
+ int compareKeyWithOpt(void *opt,const void* a,const void* b)
+ {
+        struct ABC **a1 = (struct ABC**)a;
+        struct ABC **b1 = (struct ABC**)b;
+        
+        ....
+ }
+ 
+ /*
+ calling 
+ 
+ nodePtr = searchDataInBinaryTree(binaryTree* bin,(void**)key); /* double pointer*/
+
+ nodePtr = searchDataInBinaryTreeWithOpt(binaryTree* bin,(void*)opt,(void**)key); /* double pointer*/
+ 
+ */

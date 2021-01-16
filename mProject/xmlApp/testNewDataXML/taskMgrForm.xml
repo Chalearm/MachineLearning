@@ -1,0 +1,37 @@
+<ROOT>
+    <!-- Tag COMMENT  on="0" no comment, 1 has comment
+                      pos=0 up 1 right side 2 low-->
+    <SAVE_NAME overide="0" type="xml">task_mgr</SAVE_NAME> <!-- override = 1 yes overide, 0 no overide, add suffix number instread-->
+    <ELE_TAG>
+        <ID>0</ID> <!-- id >= 0 -->
+        <ID_PARENT>-1</ID_PARENT>
+        <IS_LIST>0</IS_LIST> <!-- option 1 is list 0 is no -->
+        <NAME>ROOT</NAME>
+        <COMMENT pos="0" on="0"></COMMENT>
+        <DEFAULT_VALUE type="sub-ele"></DEFAULT_VALUE>
+        <DESCRIPTION>LEARNING MGR TASK</DESCRIPTION>
+    </ELE_TAG>
+    <ELE_TAG>
+        <ID>1</ID> <!-- id >= 0 -->
+        <ID_PARENT>0</ID_PARENT>
+        <IS_LIST>0</IS_LIST> <!-- option 1 is list 0 is no -->
+        <NAME>CURRENT_PATH</NAME>
+        <COMMENT pos="0" on="0"></COMMENT>
+        <DEFAULT_VALUE type="text">taskConfig</DEFAULT_VALUE>
+        <DESCRIPTION>name directory:</DESCRIPTION>
+    </ELE_TAG>
+        <ID>2</ID> <!-- id >= 0 -->
+        <ID_PARENT>0</ID_PARENT>
+        <IS_LIST>1</IS_LIST> <!-- option 1 is list 0 is no -->
+        <NAME>TASK</NAME>
+        <COMMENT pos="0" on="0"></COMMENT>
+        <DEFAULT_VALUE type="text">task1.xml</DEFAULT_VALUE>
+        <DESCRIPTION>task file name:</DESCRIPTION>
+        <ATTRB>
+            <NAME>use</NAME>
+            <TYPE>0</TYPE> <!-- 0 double 1 single quote-->
+            <DEFAULT_VALUE type="int">1</DEFAULT_VALUE>
+            <DESCRIPTION>Is it used(0,1)? :</DESCRIPTION>
+        <ATTRB>
+    </ELE_TAG>
+</ROOT>

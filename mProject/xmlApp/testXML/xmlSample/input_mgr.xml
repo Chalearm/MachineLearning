@@ -1,0 +1,18 @@
+<INPUT_SPACE>
+    <FILE_NAME>../dataConfig/ds_uci_Iris.xml</FILE_NAME>
+    <FILE_NAME>../dataConfig/ds_uci_LetterReg.xml</FILE_NAME>
+    <FILE_NAME>../dataConfig/ds_uci_CarEval.xml</FILE_NAME>
+    <FILE_NAME>../dataConfig/ds_uci_Dexter.xml</FILE_NAME>
+    <FILE_NAME>../dataConfig/ds_uci_Abalone.xml</FILE_NAME>
+    <FILE_NAME>../dataConfig/ds_uci_BreatCancer.xml</FILE_NAME>
+    <FILE_NAME>../dataConfig/ds_uci_ForestFires.xml</FILE_NAME>
+    <FILE_NAME>../dataConfig/ds_uci_Glass.xml</FILE_NAME>
+    <FILE_NAME>../dataConfig/ds_uci_HeartDisease.xml</FILE_NAME>
+    <FILE_NAME>../dataConfig/ds_uci_ImageSeg.xml</FILE_NAME>
+    <FILE_NAME>../dataConfig/ds_uci_optDigi.xml</FILE_NAME>
+    <FILE_NAME>../dataConfig/ds_uci_penDigi.xml</FILE_NAME>
+    <FILE_NAME>../dataConfig/ds_uci_PokerHand.xml</FILE_NAME>
+    <FILE_NAME>../dataConfig/ds_uci_Vehicle.xml</FILE_NAME>
+    <FILE_NAME>../dataConfig/ds_uci_Wine.xml</FILE_NAME>
+</INPUT_SPACE>
+

@@ -1,0 +1,30 @@
+<ROOT>
+    <KERNEL_FN>2</KERNEL_FN> <!-- 0 linear, 1 poly nomial, 2 guassian radius, 3 sigmoid, (default == 2)  -->
+
+
+    <SMO_WAY>2</SMO_WAY> <!-- 0 = original smo, 1 = keerith M.1, 2 = keerith M.2, (default == 2)  -->
+    <SVM_C_VAL>658</SVM_C_VAL> <!--  not 0 to any, (default = 12349)-->
+    
+    <!-- SMO Parameter -->
+    <TOLERANCE_PARAM>0.00123</TOLERANCE_PARAM> <!-- 0.1 to any so small (default = 0.001)-->
+    <ESP_PARAM>0.000453</ESP_PARAM> <!-- 0.1 to any so small (default = 0.001)-->
+    
+    <!-- Kernel parameter -->
+    <POW_FACTOR>0.0951</POW_FACTOR> <!-- 2 to any  (default = 5)-->
+    <GAUSSIAN_VAL>0.000645454</GAUSSIAN_VAL> <!-- not 0, default = 500 -->
+    <SIGMOID_GAIN_VAL>0.0000005</SIGMOID_GAIN_VAL> <!-- not 0, default = 1 -->
+    
+    
+    <!-- input data set -->
+    <NUM_DIMENSION>3</NUM_DIMENSION> <!-- not included output, 1 to any (default =3) -->
+    <NUM_SAMPLE>10000</NUM_SAMPLE> <!-- 3 to 10,000,000 (default = 10)-->
+    <PERCEN_TRAINING_SAM>72.123</PERCEN_TRAINING_SAM> <!-- 1% - 100% (default = 70%)-->
+    <PERCEN_CLASS_A>45.24598</PERCEN_CLASS_A>  <!-- 1% - 100% (default = 50%)-->
+    
+    <!-- random criterial -->
+    <MAX_RANDOM_VAL_CLASS_A>1100.23</MAX_RANDOM_VAL_CLASS_A>
+    <MIN_RANDOM_VAL_CLASS_A>223</MIN_RANDOM_VAL_CLASS_A>
+    <MAX_RANDOM_VAL_CLASS_B>948.15</MAX_RANDOM_VAL_CLASS_B>
+    <MIN_RANDOM_VAL_CLASS_B>20.35</MIN_RANDOM_VAL_CLASS_B>
+    
+</ROOT>

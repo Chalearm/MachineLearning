@@ -1,0 +1,46 @@
+<ROOT>
+    <NAME>SMO_QHUll with adult data set</NAME>
+    <DATA_SET_PATH>uci_adult</DATA_SET_PATH>
+    <CROSS_VALIDATE on="1">
+        <FOLD>10</FOLD>
+        <MIN_FOLD>1</MIN_FOLD>
+        <MAX_FOLD>15</MAX_FOLD>
+        <STEP_NEXT_FOLD>4</STEP_NEXT_FOLD>
+        <INCLUDE_TEST_FILES>1</INCLUDE_TEST_FILES> <!-- 0 is only training samples, 1 including test set the remainings is to test-->
+    </CROSS_VALIDATE>
+    <THE_NUMBER_OF_TRAINING_EX>100</THE_NUMBER_OF_TRAINING_EX> <!-- optional --> <!-- Ex =example-->
+    <THE_NUMBER_OF_TESTING_EX>150</THE_NUMBER_OF_TESTING_EX> <!-- optional --> 
+    <TYPE_MSVM>0</TYPE_MSVM> <!--
+                                  Me2  = -2
+                                  Me1  = -1
+                                  OAO  =  0
+                                  OAR  =  1
+                                 DDAG  =  2
+                             BTS 2006  =  3
+                           c-bts 2006  =  4
+                     NMCBNSVM&DT 2007  =  5
+                           NMSVM 2007  =  6
+                          SVMDTA 2009  =  7
+                           b-bts 2009  =  8
+                       NSVM-LEAST 2011 =  9
+                          UDT-SVM 2012 = 10
+                             -->
+    <SVM_TYPE>0</SVM_TYPE> <!-- SMO = 0, RCH =1, ... -->
+    <SCALE on="1">
+        <MAX>1</MAX>
+        <MIN>-1</MIN>
+    </SCALE>
+    <SOFTMARGIN>
+        <CONST_SOFT_M>0.5</CONST_SOFT_M>
+        <MIN_CONST_SOFT_M>0.3</MIN_CONST_SOFT_M>
+        <MAX_CONST_SOFT_M>0.7</MAX_CONST_SOFT_M>
+        <STEP_CONST_SOFT_M>0.01</STEP_CONST_SOFT_M>
+    </SOFTMARGIN> <!-- put c value for softmargin and hard margin is 0 -->
+    <KERNEL_FUNCTION no="3"> <!-- 1 = linear, 2=polynomail, 3 = guassian (default) -->
+        <CONSTANT>0.43</CONSTATN>
+        <CONST_MIN>0.22</CONST_MIN>
+        <CONST_MAX>0.66</CONST_MAX>
+        <CONST_STEP>0.01</CONST_STEP>
+    </KERNEL_FUNCTION>  
+    <ROUND>100</ROUND>
+</ROOT>

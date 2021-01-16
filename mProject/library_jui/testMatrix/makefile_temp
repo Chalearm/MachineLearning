@@ -1,0 +1,58 @@
+CC=gcc
+TARGET=main
+APATH=/ROOTPATH/mProject/library_jui
+
+APPPATH=${APATH}/testMatrix
+
+SRCPATH=${APPPATH}/src
+OBJPATH=${APPPATH}/obj
+LIBPATH=${APPPATH}/lib
+
+DATPATH=${APATH}/dataStruct
+DATSRC=${DATPATH}/src
+DATOBJ=${DATPATH}/obj
+DATLIB=${DATPATH}/lib
+
+PREF2= $(LIBPATH)/lib
+PREF3= $(DATLIB)/lib
+PREF6= -l
+
+_DEP0=$(TARGET)
+_DEP2=listPvoid
+_DEP3=simMatDouble
+
+DEP2=$(addsuffix .so,$(addprefix $(PREF3),$(_DEP2)))
+DEP3=$(addsuffix .so,$(addprefix $(PREF3),$(_DEP3)))
+
+O0=$(addsuffix .o,$(addprefix $(OBJPATH)/,$(_DEP0)))
+O2=$(addsuffix .o,$(addprefix $(DATOBJ)/,$(_DEP2)))
+O3=$(addsuffix .o,$(addprefix $(DATOBJ)/,$(_DEP3)))
+
+BR=$(DEP2)
+BR+=$(DEP3)
+
+SRC0=$(addprefix $(SRCPATH)/,$(_DEP0))
+SRC2=$(addprefix $(DATSRC)/,$(_DEP2))
+SRC3=$(addprefix $(DATSRC)/,$(_DEP3))
+OBJ=$(_DEP2)
+OBJ+=$(_DEP3)
+OBJ+=m
+LOPT=$(addprefix $(PREF6),$(OBJ))
+CMD1= $(CC) $(CFLAGS) -L$(DATLIB)  -Wall -o $@ $< -I$(SRCPATH) -I$(DATSRC)  $(LOPT)
+CMD2= $(CC) -shared -o $@ $<
+CMD3= $(CC) $(CFLAGS) -c -Wall -Werror -fpic $< -I$(SRCPATH) -I$(DATSRC) -o $@
+$(TARGET):$(O0) $(BR)
+	$(CMD1)
+$(O0):$(SRC0).c
+	$(CMD3)
+$(O2):$(SRC2).c $(SRC2).h 
+	$(CMD3)
+ $(DEP2):$(O2)
+	$(CMD2) 
+$(O3):$(SRC3).c $(SRC3).h
+	$(CMD3)
+ $(DEP3):$(O3) 
+	$(CMD2)  
+
+clean :
+	rm main ${DATLIB}/*.* ${DATOBJ}/*.* ${LIBPATH}/*.* ${OBJPATH}/*.*

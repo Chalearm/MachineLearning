@@ -1,0 +1,88 @@
+<!---------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+<root color="00FFFF" no="11" value='44' max="99">
+    <head bkcolor="0xFF00FF" width="100" height="200">
+        <child1 no="1">12345</child1>
+        <child1 no="2">13fv3</child1>
+        <child1 no="3">1d23</child1>
+
+
+    <!-- Test Comment	CHide no ='4'> -->
+        <date>
+    <!-- jui jui jui jiui 
+    dfjskfljskl ! ! ! ! !
+    fdjewkjewo _ - - dfskfjlsd sddfs  --- > 
+    ------>
+
+            <day nn='99'>20</day>
+            <month>3</month>
+            <year>2014</year>
+        </date>
+        <book>
+            <name>theLoadOfThering3</name>
+            <price>500</price>
+            <year>2009</year>
+        </book>
+        <book>
+            <name>theLoadOfThering2</name>
+            <price>500</price>
+            <year>2008</year>
+            <!--  Test Inter -->
+        </book>
+        <book>
+            <name>theLoadOfThering1</name>
+            <price>500</price>
+            <year>2003</year>
+        </book>
+        <book>
+            <name>HarryPotter</name>
+            <price>200</price>
+            <year>2001</year>
+        </book>
+    </head>
+    <body>
+        <SPEED_HOOK size="12.45">-45</SPEED_HOOK>
+        <a>bbb</a>
+        <bb no ="0" />
+        <qq no ="5" color="0xFFFF33" step='5' speed="300" unit='kmhr'>890343</qq>
+        <bb no ='1' />
+        <a>www</a><!--
+    - - -- -
+    -->
+        <a>444</a>
+        <a>ddvd</a>
+        <a no="2.5">dfdp</a>
+        <cc>
+            <aaa value='23'/>
+        </cc>
+    </body>
+    <jui>
+        <book>
+            <name>HarryPotter</name>
+            <price>200</price>
+            <year>2001</year>
+        </book>
+    </jui><!--   ddfd
+--
+
+
+-fdfjkds 
+-->
+    <eve ip="32">Midnight</eve>
+    <CH char='255'/>
+ </root><!------------- gfdkgdh  fg hfjkhglksh gfdkg ds> -->

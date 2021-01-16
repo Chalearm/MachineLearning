@@ -1,0 +1,19 @@
+<DS_SPACE>
+    <NUM_CLASS>3</NUM_CLASS>
+    <NUM_ATTRB>13</NUM_ATTRB>
+    <NUM_ATTRB_OUTPUT>1</NUM_ATTRB_OUTPUT>
+    <CURRENT_PATH>dataConfig/uciWine</CURRENT_PATH>
+    <TRAINING_FILE>
+        <FILE> <!-- can add it as a node of the list -->
+            <NAME>uci_wine_training_set_1</NAME>
+            <PATH>train/ds_uci_Wine_training_set_1.xml</PATH>
+        </FILE>
+    </TRAINING_FILE>
+    <TESTING_FILE>
+        <FILE> <!-- can add it as a node of the list -->
+            <NAME>uci_wine_testing_set_1</NAME>
+            <PATH>test/ds_uci_Wine_testing_set_1.xml</PATH>
+        </FILE>
+    </TESTING_FILE>
+    <SOURCE_PATH>SVM_ALL_STAR/DataSet/UCI/Wine Data Set</SOURCE_PATH> <!-- path directory which keep training and testing data set -->
+</DS_SPACE>

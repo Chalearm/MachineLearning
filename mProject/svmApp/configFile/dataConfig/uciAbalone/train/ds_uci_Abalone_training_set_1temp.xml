@@ -1,0 +1,36 @@
+<INPUT>
+    <FILE type="0"><!-- 0 = training set 1 = testSet -->
+        <NAME_FILE io="2">/ROOT2/UCI/Abalone/abalone.data</NAME_FILE> <!-- io =0 input only, 1 output(label) only, 2 is Io -->
+        <NUM_SAMPLE>3133</NUM_SAMPLE>
+        <CONVERT_METHOD>  <!-- 0 string to int, 1 string to double, 2 map table, 3 random(double) 4 random(int) -->
+            <!-- *****for input which cannot regconizes,the sample is rejected immediately -->
+            <METHOD>1</METHOD> <!-- default method -->
+            <MISSING><!-- list element -->                     <!-- STATICS_VAL detail -->
+                <MISSING_WORD>!</MISSING_WORD>    <!---    -1 or no tag is ignore  (use value) -->
+                <STATICS_VAL>1</STATICS_VAL>           <!--      0 is mean, 1 is median, 2 mod,-->
+                <DEFAULT_VAL>1</DEFAULT_VAL>          <!--     3 random(double) , 4 random(int)  -->
+                <ATTRB_NUM type="0">3</ATTRB_NUM> <!--ATTRB_NUM is position of element in a point 0 to d-1 0 number, 1 floting -->
+            </MISSING>
+            <ATTRB method="2" no="0">
+                <WORD value="-1">M</WORD>
+                <WORD value="1">F</WORD>
+                <WORD value="-2">I</WORD>
+            </ATTRB>
+            <MISSING><!-- list element -->                       <!-- STATICS_VAL detail -->
+                <MISSING_WORD>?</MISSING_WORD>     <!---    -1 or no tag is ignore  (use value) -->
+                <STATICS_VAL>-1</STATICS_VAL>            <!--      0 is mean, 1 is median, 2 mod,-->
+                <DEFAULT_VAL>1</DEFAULT_VAL>            <!--     3 random(double) , 4 random(int)  -->
+                <ATTRB_NUM type="0">2</ATTRB_NUM> <!--ATTRB_NUM is position of element in a point 0 to d-1 0 number, 1 floting -->
+            </MISSING>
+        </CONVERT_METHOD>
+        <SYMBOL>
+            <LINE_START>0</LINE_START>
+            <ORDER_ATTRB_START>0</ORDER_ATTRB_START>
+            <IO_START>1</IO_START> <!--Optional tag use it when io=2 read 1 Input before output, 0 output before input -->
+            <START_OUT>-1</START_OUT>
+            <STOP_OUT>,</STOP_OUT>
+            <START_INP>-1</START_INP>
+            <STOP_INP>,</STOP_INP>
+        </SYMBOL>
+    </FILE>
+</INPUT>

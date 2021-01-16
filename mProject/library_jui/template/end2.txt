@@ -1,0 +1,2 @@
+ obj is %p ,ln:%d File:%s\n",obj,__LINE__,__FILE__);
+    }

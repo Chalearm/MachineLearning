@@ -1,0 +1,7 @@
+<ROOT><!-- attribute print is optional tag: 1 = show result, 0 or no tag = nothing -->
+    <UI_MODE print="1">1</UI_MODE>
+    <ERROR_PATH_FILE print="1">errPath.txt</ERROR_PATH_FILE> <!-- 0 nothing, 1 print to file, 2 = printf, 3 both use for ReportConfigPathErr function-->
+    <CURRENT_ABSOLUTE_PATH print="0">/ROOTPATH/mProject/svmApp/configFile</CURRENT_ABSOLUTE_PATH>
+    <INPUT_CONFIGURATION print="0">dataConfig/input_mgr.xml</INPUT_CONFIGURATION>
+    <TASK_CONFIGURATION print="0">taskConfig/task_mgr.xml</TASK_CONFIGURATION>
+</ROOT>

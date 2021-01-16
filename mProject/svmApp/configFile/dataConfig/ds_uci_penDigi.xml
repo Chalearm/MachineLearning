@@ -1,0 +1,39 @@
+<INPUT>
+    <FILE type="0"><!-- 0 = training set 1 = testSet -->
+        <NAME_FILE io="2">trainingset1.dat</NAME_FILE> <!-- io =0 input only, 1 output(label) only, 2 is Io -->
+        <NUM_ATTRB>10</NUM_ATTRB>
+        <NUM_ATTRB_OUTPUT>1</NUM_ATTRB_OUTPUT>
+        <NUM_SAMPLE>200</NUM_SAMPLE>
+        <CONVERT_METHOD> <!-- 0 string to int, 1 string to double, 2 map table, 3 random(double) 4 random(int) -->
+            <METHOD>3</METHOD> <!-- default method -->
+            <ATTRB method="3" no="2" max="12.4345" min="34.23" />
+            <ATTRB method="2" src="apple" dest="-2" />
+        </CONVERT_METHOD>
+        <SYMBOL>
+            <LINE_START>10</LINE_START>
+            <ORDER_ATTRB_START></ORDER_ATTRB_START>
+            <IO_START>1</IO_START> <!--Optional tag use it when io=2 read 0 Input before output, 1 output before input -->
+            <START_OUT>-1</START_OUT>
+            <STOP_OUT>,</STOP_OUT>
+            <START_INP>-1</START_OUT>
+            <STOP_INP>,</STOP_INP>
+        </SYMBOL>
+    </FILE>
+    <FILE type="1"><!-- 0 = training set 1 = testSet -->
+        <TYPE>1</TYPE> 
+        <NAME_FILE io="2">test1.1.dat</NAME_FILE> <!-- io =0 input only, 1 output(label) only, 2 is Io -->
+        <NUM_ATTRB>10</NUM_ATTRB>
+        <NUM_ATTRB_OUTPUT>1</NUM_ATTRB_OUTPUT>
+        <NUM_SAMPLE>200</NUM_SAMPLE>
+        <CONVERT_METHOD> <!-- 0 string to int, 1 string to double, 2 map table -->
+            <METHOD>1</METHOD>
+        </CONVERT_METHOD>
+        <SYMBOL>
+            <IO_START>1</IO_START> <!--Optional tag use it when io=2 read 0 Input before output, 1 output before input -->
+            <START_OUT>-1</START_OUT>
+            <STOP_OUT>,</STOP_OUT>
+            <START_INP>-1</START_OUT>
+            <STOP_INP>,</STOP_INP>
+        </SYMBOL>
+    </FILE>
+</INPUT>

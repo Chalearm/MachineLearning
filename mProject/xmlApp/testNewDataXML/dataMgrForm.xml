@@ -1,0 +1,36 @@
+<ROOT>
+    <!-- Tag COMMENT  on="0" no comment, 1 has comment
+                      pos=0 up 1 right side 2 low-->
+    <SAVE_NAME overide="1" type="xml">input_mgr</SAVE_NAME> <!-- override = 1 yes overide, 0 no overide, add suffix number instread-->
+    <ELE_TAG>
+        <ID>0</ID> <!-- id >= 0 -->
+        <ID_PARENT>-1</ID_PARENT>
+        <IS_LIST>0</IS_LIST> <!-- option 1 is list 0 is no -->
+        <NAME>INPUT_SPACE</NAME>
+        <COMMENT pos="0" on="0"></COMMENT>
+        <DEFAULT_VALUE type="sub-ele"></DEFAULT_VALUE>
+        <DESCRIPTION>Data mgr detail:</DESCRIPTION>
+    </ELE_TAG>    
+    <ELE_TAG>
+        <ID>1</ID> <!-- id >= 0 -->
+        <ID_PARENT>0</ID_PARENT>
+        <NAME>CURRENT_PATH</NAME>
+        <COMMENT pos="0" on="0"></COMMENT>
+        <DEFAULT_VALUE type="text">dataConfig</DEFAULT_VALUE>
+        <DESCRIPTION>Data Set Path:</DESCRIPTION>
+    </ELE_TAG> 
+        <ID>1</ID> <!-- id >= 0 -->
+        <ID_PARENT>0</ID_PARENT>
+        <IS_LIST>1</IS_LIST> <!-- option 1 is list 0 is no -->
+        <NAME>FILE_NAME</NAME>
+        <COMMENT pos="0" on="0"></COMMENT>
+        <DEFAULT_VALUE type="text">dataConfig</DEFAULT_VALUE>
+        <DESCRIPTION>Data Set cfg file:</DESCRIPTION>
+        <ATTRB>
+            <NAME>name</NAME>
+            <TYPE>0</TYPE> <!-- 0 double 1 single quote-->
+            <DEFAULT_VALUE type="text">uci_xxx</DEFAULT_VALUE>
+            <DESCRIPTION>name to refer:</DESCRIPTION>
+        <ATTRB>
+    </ELE_TAG> 
+</ROOT>

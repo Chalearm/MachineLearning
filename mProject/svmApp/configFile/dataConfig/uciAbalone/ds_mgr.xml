@@ -1,0 +1,19 @@
+<DS_SPACE>
+    <NUM_CLASS>29</NUM_CLASS>
+    <NUM_ATTRB>8</NUM_ATTRB>
+    <NUM_ATTRB_OUTPUT>1</NUM_ATTRB_OUTPUT>
+    <CURRENT_PATH>dataConfig/uciAbalone</CURRENT_PATH>
+    <TRAINING_FILE>
+        <FILE> <!-- can add it as a node of the list -->
+            <NAME>uci_abalone_training_set_1</NAME> 
+            <PATH>train/ds_uci_Abalone_training_set_1.xml</PATH> <!-- relative path from current path tag -->
+        </FILE>
+    </TRAINING_FILE>
+    <TESTING_FILE>
+        <FILE> <!-- can add it as a node of the list -->
+            <NAME>uci_abalone_testing_set_1</NAME>
+            <PATH>test/ds_uci_Abalone_testing_set_1.xml</PATH><!-- relative path from current path tag -->
+        </FILE>
+    </TESTING_FILE>
+    <!--SOURCE_PATH>SVM_ALL_STAR/DataSet/UCI/Abalone Data Set/</SOURCE_PATH--> <!-- path directory which keep training and testing data set -->
+</DS_SPACE>

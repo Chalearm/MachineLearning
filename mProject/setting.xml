@@ -1,0 +1,108 @@
+<ROOT>
+    <SYMBOLS>
+        <SYM id="0" old="ROOT2" new="home/dmi"/>
+        <SYM id="1" old="ROOTPATH" new="home/dmi"/>
+        <SYM id="2" old="SVMPATH" new="svmApp"/>
+        <SYM id="3" old="SVMCONF" new="SVMPATH/configFile"/>
+        <SYM id="4" old="SVMDATF" new="SVMCONF/dataConfig"/>
+        <SYM id="5" old="m_" new="obj-&gtm_" />
+        <SYM id="6" old="FAPATH" new="fileApp/fileReplaceApp"/>
+        <SYM id="7" old="&slash&slash1open"  new_fl="library_jui/template/open1.txt"/> <!-- input from file -->
+        <SYM id="8" old="&slash&slash2open"  new_fl="library_jui/template/open2.txt"/> <!-- input from file -->
+        <SYM id="9" old="&slash&slash3open"  new_fl="library_jui/template/open3.txt"/> <!-- input from file -->
+        <SYM id="10" old="&slash&slash1end"  new_fl="library_jui/template/end1.txt"/>
+        <SYM id="11" old="&slash&slash2end"  new_fl="library_jui/template/end2.txt"/> 
+        <SYM id="12" old="&slash&slash gtXMLAttrb"  new_fl="library_jui/template/gtXAttrb.txt"/> 
+
+    </SYMBOLS>
+    <FILES>
+
+        <FILE name="jSvmApp2/src/knFn_tmp.c" output="jSvmApp2/src/knFn.c"/>
+        <FILE name="jSvmApp2/src/smoK1_tmp.c" output="jSvmApp2/src/smoK1.c"/>
+        <FILE name="jSvmApp2/src/smoBuff_tmp.c" output="jSvmApp2/src/smoBuff.c"/>
+        <FILE name="jSvmApp2/src/dtStGnHdl_tmp.c" output="jSvmApp2/src/dtStGnHdl.c"/>
+        <FILE name="jSvmApp2/src/dtSpc_tmp.c" output="jSvmApp2/src/dtSpc.c"/>
+        <FILE name="jSvmApp2/src/preprocML_tmp.c" output="jSvmApp2/src/preprocML.c"/>
+        <FILE name="jSvmApp2/src/clsDetail_tmp.c" output="jSvmApp2/src/clsDetail.c"/>
+        <FILE name="jSvmApp2/src/dDimn_tmp.c" output="jSvmApp2/src/dDimn.c"/>
+        <FILE name="jSvmApp2/src/learningMgr_tmp.c" output="jSvmApp2/src/learningMgr.c"/>
+        <FILE name="library_jui/tVectPAvlT/Makefile_temp" output="library_jui/tVectPAvlT/Makefile"/>
+        <FILE name="library_jui/tVt2/makefile_temp" output="library_jui/tVt2/makefile"/>
+        <FILE name="library_jui/tMt2/makefile_temp" output="library_jui/tMt2/makefile"/>
+        <FILE name="library_jui/tMtd2/makefile_temp" output="library_jui/tMtd2/makefile"/>
+        <FILE name="library_jui/tsMt2AvlT/makefile_temp" output="library_jui/tsMt2AvlT/makefile"/>
+        <FILE name="library_jui/tPVLMt2/makefile_temp" output="library_jui/tPVLMt2/makefile"/>
+        <FILE name="library_jui/testMatrix/makefile_temp" output="library_jui/testMatrix/makefile"/>
+        <FILE name="library_jui/tSetRv/makefile_temp" output="library_jui/tSetRv/makefile"/>
+        <FILE name="library_jui/testSMO/makefile_temp" output="library_jui/testSMO/makefile"/>
+        <FILE name="library_jui/testVDoubleAvlTree/makefile_temp" output="library_jui/testVDoubleAvlTree/makefile"/>
+        <FILE name="library_jui/tCgGd1/makefile_temp" output="library_jui/tCgGd1/makefile"/>
+        <FILE name="library_jui/tSMOKl1/makefile_temp" output="library_jui/tSMOKl1/makefile"/>
+        <FILE name="library_jui/tSMOKl2/makefile_temp" output="library_jui/tSMOKl2/makefile"/>
+        <FILE name="library_jui/tSMOWSS3/makefile_temp" output="library_jui/tSMOWSS3/makefile"/>
+        <FILE name="jSvmApp2/makefile_temp" output="jSvmApp2/makefile"/>
+        <FILE name="library_jui/tKernelFn/makefile_temp" output="library_jui/tKernelFn/makefile"/>
+        <FILE name="library_jui/testSVM/makefile_temp" output="library_jui/testSVM/makefile"/>
+        <FILE name="library_jui/tsMt2AvlT/arun.sh" output="library_jui/tsMt2AvlT/run.sh"/>
+        <FILE name="library_jui/tCgGd1/arun.sh" output="library_jui/tCgGd1/run.sh"/>
+        <FILE name="library_jui/testSVM/arun.sh" output="library_jui/testSVM/run.sh"/>
+        <FILE name="library_jui/testMatrix/arun.sh" output="library_jui/testMatrix/run.sh"/>
+        <FILE name="library_jui/testSMO/arun.sh" output="library_jui/testSMO/run.sh"/>
+        <FILE name="library_jui/tSetRv/arun.sh" output="library_jui/tSetRv/run.sh"/>
+        <FILE name="library_jui/testVDoubleAvlTree/arun.sh" output="library_jui/testVDoubleAvlTree/run.sh"/>
+        <FILE name="library_jui/tSMOKl1/arun.sh" output="library_jui/tSMOKl1/run.sh"/>
+        <FILE name="library_jui/tSMOKl2/arun.sh" output="library_jui/tSMOKl2/run.sh"/>
+        <FILE name="library_jui/tSMOWSS3/arun.sh" output="library_jui/tSMOWSS3/run.sh"/>
+        <FILE name="library_jui/tPVLMt2/arun.sh" output="library_jui/tPVLMt2/run.sh"/>
+        <FILE name="jSvmApp2/arun.sh" output="jSvmApp2/run.sh"/>
+        <FILE name="library_jui/tKernelFn/arun.sh" output="library_jui/tKernelFn/run.sh"/>
+        <FILE name="library_jui/tVectPAvlT/arun.sh" output="library_jui/tVectPAvlT/run.sh"/>
+        <FILE name="datGen/arun.sh" output="datGen/run.sh"/>
+        <FILE name="datGen/aMakefile" output="datGen/Makefile"/>
+         <!-- fileApp/fileReplace App -->
+        <FILE name="FAPATH/Makefile_temp" output="FAPATH/Makefile"/>
+        <FILE name="FAPATH/arun_temp.sh" output="FAPATH/run.sh"/>
+        <!-- SVM -->
+    <FILE name="SVMPATH/Makefile_temp" output="SVMPATH/Makefile"/>
+    <FILE name="SVMPATH/abuild.sh" output="SVMPATH/build.sh"/>
+    <FILE name="SVMCONF/main_temp.xml" output="SVMCONF/main.xml"/>
+           <!-- -UCI Path-->
+       <FILE name="SVMDATF/uciAbalone/test/ds_uci_Abalone_testing_set_1temp.xml" output="SVMDATF/uciAbalone/test/ds_uci_Abalone_testing_set_1.xml"/>
+       <FILE name="SVMDATF/uciAbalone/train/ds_uci_Abalone_training_set_1temp.xml" output="SVMDATF/uciAbalone/train/ds_uci_Abalone_training_set_1.xml"/>
+       <FILE name="SVMDATF/uciAdult/train/ds_uci_Adult_training_set_1temp.xml" output="SVMDATF/uciAdult/train/ds_uci_Adult_training_set_1.xml"/>
+       <FILE name="SVMDATF/uciAdult/test/ds_uci_Adult_testing_set_1temp.xml" output="SVMDATF/uciAdult/test/ds_uci_Adult_testing_set_1.xml"/>
+       <FILE name="SVMDATF/uciCarEval/train/ds_uci_CarEval_training_set_1temp.xml" output="SVMDATF/uciCarEval/train/ds_uci_CarEval_training_set_1.xml"/>
+       <FILE name="SVMDATF/uciCarEval/test/ds_uci_CarEval_testing_set_1temp.xml" output="SVMDATF/uciCarEval/test/ds_uci_CarEval_testing_set_1.xml"/>
+       <FILE name="SVMDATF/uciLetterReg/train/ds_uci_LetterReg_training_set_1temp.xml" output="SVMDATF/uciLetterReg/train/ds_uci_LetterReg_training_set_1.xml"/>
+       <FILE name="SVMDATF/uciLetterReg/test/ds_uci_LetterReg_testing_set_1temp.xml" output="SVMDATF/uciLetterReg/test/ds_uci_LetterReg_testing_set_1.xml"/>
+       
+       
+       <FILE name="SVMDATF/uciWine/train/ds_uci_Wine_training_set_1temp.xml" output="SVMDATF/uciWine/train/ds_uci_Wine_training_set_1.xml"/>
+       <FILE name="SVMDATF/uciWine/test/ds_uci_Wine_testing_set_1temp.xml" output="SVMDATF/uciWine/test/ds_uci_Wine_testing_set_1.xml"/>
+       
+       
+       <FILE name="SVMDATF/uciVehicle/train/ds_uci_Vehicle_training_set_1temp.xml" output="SVMDATF/uciVehicle/train/ds_uci_Vehicle_training_set_1.xml"/>
+       <FILE name="SVMDATF/uciVehicle/train/ds_uci_Vehicle_training_set_2temp.xml" output="SVMDATF/uciVehicle/train/ds_uci_Vehicle_training_set_2.xml"/>
+       <FILE name="SVMDATF/uciVehicle/train/ds_uci_Vehicle_training_set_3temp.xml" output="SVMDATF/uciVehicle/train/ds_uci_Vehicle_training_set_3.xml"/>
+       <FILE name="SVMDATF/uciVehicle/train/ds_uci_Vehicle_training_set_4temp.xml" output="SVMDATF/uciVehicle/train/ds_uci_Vehicle_training_set_4.xml"/>
+       <FILE name="SVMDATF/uciVehicle/train/ds_uci_Vehicle_training_set_5temp.xml" output="SVMDATF/uciVehicle/train/ds_uci_Vehicle_training_set_5.xml"/>
+       <FILE name="SVMDATF/uciVehicle/train/ds_uci_Vehicle_training_set_6temp.xml" output="SVMDATF/uciVehicle/train/ds_uci_Vehicle_training_set_6.xml"/>
+       <FILE name="SVMDATF/uciVehicle/test/ds_uci_Vehicle_testing_set_1temp.xml" output="SVMDATF/uciVehicle/test/ds_uci_Vehicle_testing_set_1.xml"/>
+       <FILE name="SVMDATF/uciVehicle/test/ds_uci_Vehicle_testing_set_2temp.xml" output="SVMDATF/uciVehicle/test/ds_uci_Vehicle_testing_set_2.xml"/>
+       <FILE name="SVMDATF/uciVehicle/test/ds_uci_Vehicle_testing_set_3temp.xml" output="SVMDATF/uciVehicle/test/ds_uci_Vehicle_testing_set_3.xml"/>
+       <FILE name="SVMDATF/uciVehicle/test/ds_uci_Vehicle_testing_set_4temp.xml" output="SVMDATF/uciVehicle/test/ds_uci_Vehicle_testing_set_4.xml"/>
+       <FILE name="SVMDATF/uciVehicle/test/ds_uci_Vehicle_testing_set_5temp.xml" output="SVMDATF/uciVehicle/test/ds_uci_Vehicle_testing_set_5.xml"/>
+       <FILE name="SVMDATF/uciVehicle/test/ds_uci_Vehicle_testing_set_6temp.xml" output="SVMDATF/uciVehicle/test/ds_uci_Vehicle_testing_set_6.xml"/>
+    </FILES>
+</ROOT>
+
+<!-- special symbol 
+
+    &quot =  "
+    &perc = %
+    &amp = &
+    &apos = '
+    &lt = <
+    &gt= >
+
+-->

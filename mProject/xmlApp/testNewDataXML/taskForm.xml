@@ -1,0 +1,239 @@
+<ROOT>
+    <!-- Tag COMMENT  on="0" no comment, 1 has comment
+                      pos=0 up 1 right side 2 low-->
+    <SAVE_NAME overide="0" type="xml" prefix="" suffix="">task</SAVE_NAME> <!-- override = 1 yes overide, 0 no overide, add suffix number instread-->
+    <ELE_TAG>
+        <ID>0</ID> <!-- id >= 0 -->
+        <ID_PARENT>-1</ID_PARENT>
+        <IS_LIST>0</IS_LIST> <!-- option 1 is list 0 is no -->
+        <NAME>ROOT</NAME>
+        <COMMENT pos="0" on="0"></COMMENT>
+        <DEFAULT_VALUE type="sub-ele"></DEFAULT_VALUE>
+        <DESCRIPTION>LEARNING TASK</DESCRIPTION>
+    </ELE_TAG>
+    <ELE_TAG>
+        <ID>1</ID> <!-- id >= 0 -->
+        <ID_PARENT>0</ID_PARENT>
+        <NAME>NAME</NAME>
+        <COMMENT pos="0" on="0"></COMMENT>
+        <DEFAULT_VALUE type="text">NAME OF Learning task</DEFAULT_VALUE>
+        <DESCRIPTION>Task Name:</DESCRIPTION>
+    </ELE_TAG>    
+    <ELE_TAG>
+        <ID>2</ID> <!-- id >= 0 -->
+        <ID_PARENT>0</ID_PARENT>
+        <NAME>DATA_SET_PATH</NAME>
+        <COMMENT pos="0" on="0"></COMMENT>
+        <DEFAULT_VALUE type="text">Data set input</DEFAULT_VALUE>
+        <DESCRIPTION>Data Set  Name:</DESCRIPTION>
+    </ELE_TAG>    
+    <ELE_TAG>
+        <ID>3</ID> <!-- id >= 0 -->
+        <ID_PARENT>0</ID_PARENT>
+        <NAME>CROSS_VALIDATE</NAME>
+        <COMMENT pos="0" on="0"></COMMENT>
+        <DEFAULT_VALUE type="sub-ele"></DEFAULT_VALUE>
+        <DESCRIPTION>cross_validate detail:</DESCRIPTION>
+        <ATTRB>
+            <NAME>on</NAME>
+            <TYPE>0</TYPE> <!-- 0 double 1 single quote-->
+            <DEFAULT_VALUE type="int">0</DEFAULT_VALUE>
+            <DESCRIPTION>on : 1 is used, 0 no used</DESCRIPTION>
+        </ATTRB>
+    </ELE_TAG>
+    <ELE_TAG>
+        <ID>31</ID> <!-- id >= 0 -->
+        <ID_PARENT>3</ID_PARENT>
+        <NAME>FOLD</NAME>
+        <COMMENT pos="0" on="0"></COMMENT>
+        <DEFAULT_VALUE type="int">10</DEFAULT_VALUE>
+        <DESCRIPTION>the number of folds:</DESCRIPTION>
+    </ELE_TAG>       
+    <ELE_TAG>
+        <ID>32</ID> <!-- id >= 0 -->
+        <ID_PARENT>3</ID_PARENT>
+        <NAME>MIN_FOLD</NAME>
+        <COMMENT pos="0" on="0"></COMMENT>
+        <DEFAULT_VALUE type="int">1</DEFAULT_VALUE>
+        <DESCRIPTION>minimun size of fold:</DESCRIPTION>
+    </ELE_TAG>       
+    <ELE_TAG>
+        <ID>33</ID> <!-- id >= 0 -->
+        <ID_PARENT>3</ID_PARENT>
+        <NAME>MAX_FOLD</NAME>
+        <COMMENT pos="0" on="0"></COMMENT>
+        <DEFAULT_VALUE type="int">15</DEFAULT_VALUE>
+        <DESCRIPTION>maximum size of fold:</DESCRIPTION>
+    </ELE_TAG>      
+    <ELE_TAG>
+        <ID>34</ID> <!-- id >= 0 -->
+        <ID_PARENT>3</ID_PARENT>
+        <NAME>STEP_NEXT_FOLD</NAME>
+        <COMMENT pos="0" on="0"></COMMENT>
+        <DEFAULT_VALUE type="int">1</DEFAULT_VALUE>
+        <DESCRIPTION>step size of fold:</DESCRIPTION>
+    </ELE_TAG>      
+    <ELE_TAG>
+        <ID>4</ID> <!-- id >= 0 -->
+        <ID_PARENT>0</ID_PARENT>
+        <NAME>SCALE</NAME>
+        <COMMENT pos="0" on="0"></COMMENT>
+        <DEFAULT_VALUE type="sub-ele"></DEFAULT_VALUE>
+        <DESCRIPTION>Scale detail:</DESCRIPTION>
+    </ELE_TAG>      
+    <ELE_TAG>
+        <ID>41</ID> <!-- id >= 0 -->
+        <ID_PARENT>4</ID_PARENT>
+        <NAME>MAX</NAME>
+        <COMMENT pos="0" on="0"></COMMENT>
+        <DEFAULT_VALUE type="int">1</DEFAULT_VALUE>
+        <DESCRIPTION>upper bound:</DESCRIPTION>
+    </ELE_TAG>     
+    <ELE_TAG>
+        <ID>42</ID> <!-- id >= 0 -->
+        <ID_PARENT>4</ID_PARENT>
+        <NAME>MIN</NAME>
+        <COMMENT pos="0" on="0"></COMMENT>
+        <DEFAULT_VALUE type="int">-1</DEFAULT_VALUE>
+        <DESCRIPTION>lower bound:</DESCRIPTION>
+    </ELE_TAG>      
+    <ELE_TAG>
+        <ID>5</ID> <!-- id >= 0 -->
+        <ID_PARENT>0</ID_PARENT>
+        <COMMENT pos="0" on="0"></COMMENT>
+        <NAME>THE_NUMBER_OF_TRAINING_EX</NAME>
+        <DEFAULT_VALUE type="int">100</DEFAULT_VALUE>
+        <DESCRIPTION>the number of trainig samples:</DESCRIPTION>
+    </ELE_TAG>     
+    <ELE_TAG>
+        <ID>6</ID> <!-- id >= 0 -->
+        <ID_PARENT>0</ID_PARENT>
+        <COMMENT pos="0" on="0"></COMMENT>
+        <NAME>THE_NUMBER_OF_TESTING_EX</NAME>
+        <DEFAULT_VALUE type="int">150</DEFAULT_VALUE>
+        <DESCRIPTION>the number of test samples:</DESCRIPTION>
+    </ELE_TAG>     
+    <ELE_TAG>
+        <ID>7</ID> <!-- id >= 0 -->
+        <ID_PARENT>0</ID_PARENT>
+        <NAME>SVM_TYPE</NAME>
+        <COMMENT pos="1" on="1">  
+                                  Me2  = -2
+                                  Me1  = -1
+                                  OAO  =  0
+                                  OAR  =  1
+                                 DDAG  =  2
+                             BTS 2006  =  3
+                           c-bts 2006  =  4
+                     NMCBNSVM&ampDT 2007  =  5
+                           NMSVM 2007  =  6
+                          SVMDTA 2009  =  7
+                           b-bts 2009  =  8
+                       NSVM-LEAST 2011 =  9
+                          UDT-SVM 2012 = 10</COMMENT>
+        <DEFAULT_VALUE type="int">150</DEFAULT_VALUE>
+        <DESCRIPTION>type of MSVM:</DESCRIPTION>
+    </ELE_TAG>       
+    <ELE_TAG>
+        <ID>8</ID> <!-- id >= 0 -->
+        <ID_PARENT>0</ID_PARENT>
+        <COMMENT pos="1" on="1">SMO = 0, RCH =1, ...</COMMENT>
+        <NAME>SVM_TYPE</NAME>
+        <DEFAULT_VALUE type="int">0</DEFAULT_VALUE>
+        <DESCRIPTION>type of svm:</DESCRIPTION>
+    </ELE_TAG>       
+    <ELE_TAG>
+        <ID>9</ID> <!-- id >= 0 -->
+        <ID_PARENT>0</ID_PARENT>
+        <COMMENT pos="0" on="0"></COMMENT>
+        <NAME>SOFTMARGIN</NAME>
+        <DEFAULT_VALUE type="sub-ele"></DEFAULT_VALUE>
+        <DESCRIPTION>soft margin detail:</DESCRIPTION>
+    </ELE_TAG>       
+    <ELE_TAG>
+        <ID>91</ID> <!-- id >= 0 -->
+        <ID_PARENT>9</ID_PARENT>
+        <COMMENT pos="0" on="0"></COMMENT>
+        <NAME>CONST_SOFT_M</NAME>
+        <DEFAULT_VALUE type="double">0.5</DEFAULT_VALUE>
+        <DESCRIPTION>const soft margin:</DESCRIPTION>
+    </ELE_TAG>    
+    <ELE_TAG>
+        <ID>92</ID> <!-- id >= 0 -->
+        <ID_PARENT>9</ID_PARENT>
+        <COMMENT pos="0" on="0"></COMMENT>
+        <NAME>MIN_CONST_SOFT_M</NAME>
+        <DEFAULT_VALUE type="double">0.3</DEFAULT_VALUE>
+        <DESCRIPTION>min const soft margin:</DESCRIPTION>
+    </ELE_TAG>       
+    <ELE_TAG>
+        <ID>93</ID> <!-- id >= 0 -->
+        <ID_PARENT>9</ID_PARENT>
+        <COMMENT pos="0" on="0"></COMMENT>
+        <NAME>MAX_CONST_SOFT_M</NAME>
+        <DEFAULT_VALUE type="double">0.7</DEFAULT_VALUE>
+        <DESCRIPTION>max const soft margin:</DESCRIPTION>
+    </ELE_TAG>     
+    <ELE_TAG>
+        <ID>94</ID> <!-- id >= 0 -->
+        <ID_PARENT>9</ID_PARENT>
+        <COMMENT pos="0" on="0"></COMMENT>
+        <NAME>STEP_CONST_SOFT_M</NAME>
+        <DEFAULT_VALUE type="double">0.1</DEFAULT_VALUE>
+        <DESCRIPTION>step const soft margin:</DESCRIPTION>
+    </ELE_TAG>      
+    <ELE_TAG>
+        <ID>100</ID> <!-- id >= 0 -->
+        <ID_PARENT>0</ID_PARENT>
+        <COMMENT pos="1" on="1">1 = linear, 2=polynomail, 3 = guassian (default)</COMMENT>
+        <NAME>KERNEL_FUNCTION</NAME>
+        <DEFAULT_VALUE type="sub-ele"></DEFAULT_VALUE>
+        <DESCRIPTION>Kernel function detail:</DESCRIPTION>
+        <ATTRB>
+            <NAME>no</NAME>
+            <TYPE>0</TYPE> <!-- 0 double 1 single quote-->
+            <DEFAULT_VALUE type="int">3</DEFAULT_VALUE>
+            <DESCRIPTION>type of constanst:</DESCRIPTION>
+        </ATTRB>
+    </ELE_TAG> 
+    <ELE_TAG>
+        <ID>101</ID> <!-- id >= 0 -->
+        <ID_PARENT>100</ID_PARENT>
+        <COMMENT pos="0" on="0"></COMMENT>
+        <NAME>CONSTANT</NAME>
+        <DEFAULT_VALUE type="double">0.43</DEFAULT_VALUE>
+        <DESCRIPTION>constant:</DESCRIPTION>
+    </ELE_TAG>
+    <ELE_TAG>
+        <ID>102</ID> <!-- id >= 0 -->
+        <ID_PARENT>100</ID_PARENT>
+        <COMMENT pos="0" on="0"></COMMENT>
+        <NAME>CONST_MIN</NAME>
+        <DEFAULT_VALUE type="double">0.22</DEFAULT_VALUE>
+        <DESCRIPTION>min constant:</DESCRIPTION>
+    </ELE_TAG>
+    <ELE_TAG>
+        <ID>103</ID> <!-- id >= 0 -->
+        <ID_PARENT>100</ID_PARENT>
+        <COMMENT pos="0" on="0"></COMMENT>
+        <NAME>CONST_MAX</NAME>
+        <DEFAULT_VALUE type="double">0.66</DEFAULT_VALUE>
+        <DESCRIPTION>max constant:</DESCRIPTION>
+    </ELE_TAG>
+    <ELE_TAG>
+        <ID>104</ID> <!-- id >= 0 -->
+        <ID_PARENT>100</ID_PARENT>
+        <COMMENT pos="0" on="0"></COMMENT>
+        <NAME>CONST_STEP</NAME>
+        <DEFAULT_VALUE type="double">0.01</DEFAULT_VALUE>
+        <DESCRIPTION>step constant:</DESCRIPTION>
+    </ELE_TAG>
+    <ELE_TAG>
+        <ID>110</ID> <!-- id >= 0 -->
+        <ID_PARENT>0</ID_PARENT>
+        <COMMENT pos="0" on="0"></COMMENT>
+        <NAME>ROUND</NAME>
+        <DEFAULT_VALUE type="int">100</DEFAULT_VALUE>
+        <DESCRIPTION>round :</DESCRIPTION>
+    </ELE_TAG>
+</ROOT>

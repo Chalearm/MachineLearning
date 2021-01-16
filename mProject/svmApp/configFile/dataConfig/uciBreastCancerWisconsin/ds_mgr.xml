@@ -1,0 +1,20 @@
+<DS_SPACE>
+    <NUM_CLASS>2</NUM_CLASS>
+    <NUM_ATTRB>9</NUM_ATTRB>
+    <NUM_ATTRB_OUTPUT>1</NUM_ATTRB_OUTPUT> 
+    <CURRENT_PATH>dataConfig/uciBreastCancerWisconsin</CURRENT_PATH>
+    <TRAINING_FILE>
+        <FILE> <!-- can add it as a node of the list -->
+            <NAME>uci_BreastCancerWisconsin_training_set_1</NAME> 
+            <PATH>train/ds_uci_BreastCancerWisconsin_training_set_1.xml</PATH> <!-- relative path from current path tag -->
+        </FILE>
+    </TRAINING_FILE>
+    <TESTING_FILE>
+        <FILE> <!-- can add it as a node of the list -->
+            <NAME>uci_BreastCancerWpbc_testing_set_1</NAME>
+            <PATH>test/ds_uci_BreastCancerWisconsin_testing_set_1.xml</PATH><!-- relative path from current path tag -->
+        </FILE>
+    </TESTING_FILE>
+<!--
+    <SOURCE_PATH>SVM_ALL_STAR/DataSet/UCI/Breast Cancer Wisconsin (Diagnostic) Data Set/</SOURCE_PATH>--> <!-- path directory which keep training and testing data set -->
+</DS_SPACE>

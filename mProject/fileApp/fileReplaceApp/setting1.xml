@@ -1,0 +1,30 @@
+<ROOT>
+    <SYMBOLS>
+        <SYM id="0" old="ROOTPATH" new="home/dmi"/>
+        <SYM id="f1" old="ABA"  new_fl="text1.txt"/> <!-- input from file -->
+        <SYM  id="1" old="aaa" new="BBB"/>
+        <SYM  id="2" old="Tree" new="OO"/>
+        <SYM  id="3" old="&perc3" new="Jui"/>
+        <SYM  id="4" old="&perc2" new="Do the thing"/> 
+        <SYM  id="5" old="&perc1" new="I love you"/>
+        <SYM  id="6" old="include" new="increase"/>
+        <SYM  id="7" old="&star" new="&amp"/>
+        <SYM  id="8" old=" " new="X"/>
+    </SYMBOLS>
+    <FILES>
+        <!--FILE name="Makefile_temp" output="Makefile"/-->
+        <FILE name="input.data" output="bb.cpp"/>
+        <FILE name="input2.data" output="aaa.cpp"/> <!-- change old -->
+    </FILES>
+</ROOT>
+
+<!-- special symbol 
+
+    &quot =  "
+    &perc = %
+    &amp = &
+    &apos = '
+    &lt = <
+    &gt= >
+
+-->

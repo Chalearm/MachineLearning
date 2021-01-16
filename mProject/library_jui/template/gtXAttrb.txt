@@ -1,0 +1,1 @@
+ret = ( ret == 1) &&  fnGtAttrbFirstChildEle

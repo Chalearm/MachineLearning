@@ -1,0 +1,25 @@
+<INPUT>
+    <FILE type="0"><!-- 0 = training set 1 = testSet -->
+        <NAME_FILE io="2">/ROOT2/UCI/VehicleIlhouettes/xai.dat</NAME_FILE> <!-- io =0 input only, 1 output(label) only, 2 is Io -->
+        <NUM_SAMPLE>50</NUM_SAMPLE>
+        <CONVERT_METHOD>  <!-- 0 string to int, 1 string to double, 2 map table, 3 random(double) 4 random(int) -->
+            <!-- *****for input which cannot regconizes,the sample is rejected immediately -->
+            <METHOD>1</METHOD> <!-- default method -->
+            <ATTRB method="2" no="18"> <!-- no= attribute index = 0 -->
+                <WORD value="2">opel</WORD>
+                <WORD value="1">saab</WORD>
+                <WORD value="-1">bus</WORD>
+                <WORD value="-2">van</WORD>
+            </ATTRB>
+        </CONVERT_METHOD>
+        <SYMBOL>
+            <LINE_START>0</LINE_START>
+            <ORDER_ATTRB_START>0</ORDER_ATTRB_START>
+            <IO_START>1</IO_START> <!--Optional tag use it when io=2 read 1 Input before output, 0 output before input -->
+            <START_OUT> </START_OUT>
+            <STOP_OUT>-1</STOP_OUT>
+            <START_INP>-1</START_OUT>
+            <STOP_INP> </STOP_INP>
+        </SYMBOL>
+    </FILE>
+</INPUT>

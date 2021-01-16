@@ -1,0 +1,21 @@
+<ROOT>
+    <CHEAP_STOCK>0.5</CHEAP_STOCK>
+    <EXPENSIVE_STOCK>33</EXPENSIVE_STOCK>
+    <LIMIT_DAY_TO_GET_THE_INCOME>200</LIMIT_DAY_TO_GET_THE_INCOME>
+    <THE__MIN_NUMBER_OF_STOCK_TO_BUY>500</THE__MIN_NUMBER_OF_STOCK_TO_BUY>
+    <THE__MAX_NUMBER_OF_STOCK_TO_BUY>20000</THE__MAX_NUMBER_OF_STOCK_TO_BUY>
+    <START_MONEY>10000</START_MONEY> <!-- in baht-->
+    <INCOME_EXPECT_PER_DAY>5000</INCOME_EXPECT_PER_DAY> <!-- in baht -->
+    <MAX_TO_LOSS>50</MAX_TO_LOSS> <!-- percent -->
+    <MAX_TO_GET>50</MAX_TO_GET> <!-- percent -->
+    <EXPECT_PERCENT_TO_SELL>32</EXPECT_PERCENT_TO_SELL>
+    <REMAIN_STOCK_MIN>20</REMAIN_STOCK_MIN> <!-- in percent -->
+    <REMAIN_STOCK_MAX>30</REMAIN_STOCK_MAX> <!-- in percent -->
+    <KEEP_IN_PORT>45</KEEP_IN_PORT> <!-- in percent, other to account --> 
+    <!-- output 
+            the number of day to get the income
+            the remain of the stocks!!
+            the money in account
+            the money in port
+    -->
+</ROOT>

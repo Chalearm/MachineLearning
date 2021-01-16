@@ -1,0 +1,1 @@
+export LD_LIBRARY_PATH=/home/jui/mProject/library_jui/XMLLibrary/lib/:/home/jui/mProject/library_jui/strLibrary/lib/

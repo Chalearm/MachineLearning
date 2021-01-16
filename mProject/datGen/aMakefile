@@ -1,0 +1,184 @@
+CC=g++
+TARGET=main
+ADIR=/ROOTPATH/mProject
+
+DGDIR=$(ADIR)/datGen
+DGIDIR=$(DGDIR)/src
+DGODIR=$(DGDIR)/obj
+DGLDIR=$(DGDIR)/lib
+
+
+TDIR=$(ADIR)/library_jui/TreeLib
+IDIR=$(TDIR)/src
+ODIR=$(TDIR)/obj
+LDIR=$(TDIR)/lib
+
+XMLDIR=$(ADIR)/library_jui/XMLLibrary
+XMLIDIR=$(XMLDIR)/src
+XMLODIR=$(XMLDIR)/obj
+XMLLDIR=$(XMLDIR)/lib
+
+STRDIR=$(ADIR)/library_jui/strLibrary
+STRIDIR=$(STRDIR)/src
+STRODIR=$(STRDIR)/obj
+STRLDIR=$(STRDIR)/lib
+
+DTSTDIR=$(ADIR)/library_jui/dataStruct
+DTSIDIR=$(DTSTDIR)/src
+DTSODIR=$(DTSTDIR)/obj
+DTSLDIR=$(DTSTDIR)/lib
+
+PREF1= $(LDIR)/lib
+PREF3= $(DTSLDIR)/lib
+PREF4= $(DGLDIR)/lib
+PREF5= $(STRLDIR)/lib
+PREF6= $(XMLLDIR)/lib
+PREF2= -l
+
+_DEP1=dataTypeAndRoutineDefine
+_DEP2=binaryTree
+_DEP3=simMatDouble
+_DEP4=avlTree
+_DEP5=datgen
+_DEP6=simString
+
+_DEP7=simReadXML
+_DEP8=listChar
+_DEP9=listMatChar
+_DEP10=simMatChar
+_DEP11=eleXMLNodeList
+_DEP12=simStringList
+_DEP13=convertStr2Digi
+_DEP14=simMatInt
+
+DEP1=$(addsuffix .so,$(addprefix $(PREF1),$(_DEP1)))
+DEP2=$(addsuffix .so,$(addprefix $(PREF1),$(_DEP2)))
+DEP3=$(addsuffix .so,$(addprefix $(PREF3),$(_DEP14)))
+DEP14=$(addsuffix .so,$(addprefix $(PREF3),$(_DEP1)))
+DEP4=$(addsuffix .so,$(addprefix $(PREF1),$(_DEP4)))
+DEP5=$(addsuffix .so,$(addprefix $(PREF4),$(_DEP5)))
+DEP6=$(addsuffix .so,$(addprefix $(PREF5),$(_DEP6)))
+DEP7=$(addsuffix .so,$(addprefix $(PREF6),$(_DEP7)))
+DEP8=$(addsuffix .so,$(addprefix $(PREF6),$(_DEP8)))
+DEP9=$(addsuffix .so,$(addprefix $(PREF6),$(_DEP9)))
+DEP10=$(addsuffix .so,$(addprefix $(PREF6),$(_DEP10)))
+DEP11=$(addsuffix .so,$(addprefix $(PREF6),$(_DEP11)))
+DEP12=$(addsuffix .so,$(addprefix $(PREF5),$(_DEP12)))
+DEP13=$(addsuffix .so,$(addprefix $(PREF5),$(_DEP13)))
+O1=$(addsuffix .o,$(addprefix $(ODIR)/,$(_DEP1)))
+O2=$(addsuffix .o,$(addprefix $(ODIR)/,$(_DEP2)))
+O3=$(addsuffix .o,$(addprefix $(DTSODIR)/,$(_DEP3)))
+O4=$(addsuffix .o,$(addprefix $(ODIR)/,$(_DEP4)))
+O5=$(addsuffix .o,$(addprefix $(DGODIR)/,$(_DEP5)))
+O6=$(addsuffix .o,$(addprefix $(STRODIR)/,$(_DEP6)))
+O7=$(addsuffix .o,$(addprefix $(XMLODIR)/,$(_DEP7)))
+O8=$(addsuffix .o,$(addprefix $(XMLODIR)/,$(_DEP8)))
+O9=$(addsuffix .o,$(addprefix $(XMLODIR)/,$(_DEP9)))
+O10=$(addsuffix .o,$(addprefix $(XMLODIR)/,$(_DEP10)))
+O11=$(addsuffix .o,$(addprefix $(XMLODIR)/,$(_DEP11)))
+O12=$(addsuffix .o,$(addprefix $(STRODIR)/,$(_DEP12)))
+O13=$(addsuffix .o,$(addprefix $(STRODIR)/,$(_DEP13)))
+O14=$(addsuffix .o,$(addprefix $(DTSODIR)/,$(_DEP14)))
+SRC1=$(addprefix $(IDIR)/,$(_DEP1))
+SRC2=$(addprefix $(IDIR)/,$(_DEP2))
+SRC3=$(addprefix $(DTSIDIR)/,$(_DEP3))
+SRC4=$(addprefix $(IDIR)/,$(_DEP4))
+SRC5=$(addprefix $(DGIDIR)/,$(_DEP5))
+SRC6=$(addprefix $(STRIDIR)/,$(_DEP6))
+SRC7=$(addprefix $(XMLIDIR)/,$(_DEP7))
+SRC8=$(addprefix $(XMLIDIR)/,$(_DEP8))
+SRC9=$(addprefix $(XMLIDIR)/,$(_DEP9))
+SRC10=$(addprefix $(XMLIDIR)/,$(_DEP10))
+SRC11=$(addprefix $(XMLIDIR)/,$(_DEP11))
+SRC12=$(addprefix $(STRIDIR)/,$(_DEP12))
+SRC13=$(addprefix $(STRIDIR)/,$(_DEP13))
+SRC14=$(addprefix $(DTSIDIR)/,$(_DEP14))
+OBJ=$(DEP3)
+OBJ+=$(DEP1)
+OBJ+=$(DEP2)
+OBJ+=$(DEP4)
+OBJ+=$(DEP5)
+OBJ+=$(DEP6)
+OBJ+=$(DEP7)
+OBJ+=$(DEP8)
+OBJ+=$(DEP9)
+OBJ+=$(DEP10)
+OBJ+=$(DEP11)
+OBJ+=$(DEP12)
+OBJ+=$(DEP13)
+OBJ+=$(DEP14)
+_OBJ=$(_DEP5)
+_OBJ+=$(_DEP6)
+_OBJ+=$(_DEP7)
+_OBJ+=$(_DEP9)
+_OBJ+=$(_DEP8)
+_OBJ+=$(_DEP10)
+_OBJ+=$(_DEP11)
+_OBJ+=$(_DEP12)
+_OBJ+=$(_DEP13)
+_OBJ+=$(_DEP14)
+LOPT=$(addprefix $(PREF2),$(_OBJ))
+CMD1= $(CC) $(CFLAGS) -L$(DGLDIR) -L$(DTSLDIR) -L$(LDIR) -L$(STRLDIR) -L$(XMLLDIR)  -Wall -o $@ $@.cpp -I$(DGIDIR) -I$(DTSIDIR) -I$(IDIR) -I$(STRIDIR) -I$(XMLIDIR) $(LOPT)
+CMD2= $(CC) -shared -o $@ $<
+CMD3= $(CC) $(CFLAGS) -c -Wall -Werror -fpic $< -I$(DGIDIR) -I$(IDIR) -I$(DTSIDIR) -I$(STRIDIR) -I$(XMLIDIR) -o $@
+$(TARGET):$(OBJ) $(TARGET).cpp
+	$(CMD1)
+$(DEP3):$(O3)
+	$(CMD2)
+$(O3):$(SRC3).c $(SRC3).h
+	$(CMD3)
+$(DEP4):$(O4) $(O2) $(O6) $(O10)
+	$(CMD2) $(O1) $(O2) $(O3) $(O6) $(O10)
+$(O4):$(SRC4).c $(SRC4).h
+	$(CMD3)
+$(DEP6):$(O6) 
+	$(CMD2) 
+$(O6):$(SRC6).c $(SRC6).h
+	$(CMD3)
+$(DEP2):$(O2) 
+	$(CMD2) 
+$(O2):$(SRC2).c $(SRC2).h
+	$(CMD3)
+$(DEP1):$(O1)
+	$(CMD2)
+$(O1):$(SRC1).c $(SRC1).h
+	$(CMD3)
+$(DEP5):$(O5) $(O6) $(O7) $(O14)
+	$(CMD2) $(O6) $(O7) $(O14)
+$(O5):$(SRC5).cpp $(SRC5).h
+	$(CMD3)
+$(DEP7):$(O7)
+	$(CMD2)
+$(O7):$(SRC7).c $(SRC7).h
+	$(CMD3)
+$(DEP14):$(O14)
+	$(CMD2)
+$(O14):$(SRC14).c $(SRC14).h
+	$(CMD3)
+$(DEP8):$(O8)
+	$(CMD2)
+$(O8):$(SRC8).c $(SRC8).h
+	$(CMD3)
+$(DEP9):$(O9)
+	$(CMD2)
+$(O9):$(SRC9).c $(SRC9).h
+	$(CMD3)
+$(DEP10):$(O10)
+	$(CMD2)
+$(O10):$(SRC10).c $(SRC10).h
+	$(CMD3)
+$(DEP11):$(O11)
+	$(CMD2)
+$(O11):$(SRC11).c $(SRC11).h
+	$(CMD3)
+$(DEP12):$(O12)
+	$(CMD2)
+$(O12):$(SRC12).c $(SRC12).h
+	$(CMD3)
+$(DEP13):$(O13)
+	$(CMD2)
+$(O13):$(SRC13).c $(SRC13).h
+	$(CMD3)
+clean: 
+	rm $(LDIR)/* $(XMLLDIR)/* $(XMLODIR)/* $(ODIR)/* $(DGLDIR)/* $(DGODIR)/*  $(DTSODIR)/* $(DTSLDIR)/* $(STRLDIR)/* $(STRODIR)/* $(ODIR)/*
+	rm $(TARGET) 

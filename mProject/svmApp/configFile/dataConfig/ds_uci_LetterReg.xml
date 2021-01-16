@@ -1,0 +1,93 @@
+<INPUT>
+    <NUM_CLASS>26</NUM_CLASS>
+    <NUM_ATTRB>16</NUM_ATTRB>
+    <NUM_ATTRB_OUTPUT>1</NUM_ATTRB_OUTPUT>
+    <FILE type="0"><!-- 0 = training set 1 = testSet -->
+        <NAME_FILE io="2">letter-recognition.data</NAME_FILE> <!-- io =0 input only, 1 output(label) only, 2 is Io -->
+        <NUM_SAMPLE>16000</NUM_SAMPLE>
+        <CONVERT_METHOD> <!-- 0 string to int, 1 string to double, 2 map table, 3 random(double) 4 random(int) -->
+            <METHOD>1</METHOD> <!-- default method -->
+            <ATTRB method="2" no="0">
+                <WORD value="1">A</WORD>
+                <WORD value="-1">B</WORD>
+                <WORD value="2">C</WORD>
+                <WORD value="-2">D</WORD>
+                <WORD value="3">E</WORD>
+                <WORD value="-3">F</WORD>
+                <WORD value="4">G</WORD>
+                <WORD value="-4">H</WORD>
+                <WORD value="5">I</WORD>
+                <WORD value="-5">J</WORD>
+                <WORD value="6">K</WORD>
+                <WORD value="-6">L</WORD>
+                <WORD value="7">M</WORD>
+                <WORD value="-7">N</WORD>
+                <WORD value="8">O</WORD>
+                <WORD value="-8">P</WORD>
+                <WORD value="9">Q</WORD>
+                <WORD value="-9">R</WORD>
+                <WORD value="10">S</WORD>
+                <WORD value="-10">T</WORD>
+                <WORD value="11">U</WORD>
+                <WORD value="-11">V</WORD>
+                <WORD value="12">W</WORD>
+                <WORD value="-12">X</WORD>
+                <WORD value="13">Y</WORD>
+                <WORD value="-13">Z</WORD>
+            </ATTRB>
+        </CONVERT_METHOD>
+        <SYMBOL>
+            <LINE_START>0</LINE_START>
+            <ORDER_ATTRB_START>0</ORDER_ATTRB_START>
+            <IO_START>1</IO_START> <!--Optional tag use it when io=2 read 0 Input before output, 1 output before input -->
+            <START_OUT>-1</START_OUT>
+            <STOP_OUT>,</STOP_OUT>
+            <START_INP>-1</START_OUT>
+            <STOP_INP>,</STOP_INP>
+        </SYMBOL>
+    </FILE>
+    <FILE type="1"><!-- 0 = training set 1 = testSet -->
+        <NAME_FILE io="2">letter-recognition.data</NAME_FILE> <!-- io =0 input only, 1 output(label) only, 2 is Io -->
+        <NUM_SAMPLE>4000</NUM_SAMPLE>
+        <CONVERT_METHOD> <!-- 0 string to int, 1 string to double, 2 map table, 3 random(double) 4 random(int) -->
+            <METHOD>1</METHOD> <!-- default method -->
+            <ATTRB method="2" no="0">
+                <WORD value="789">A</WORD>
+                <WORD value="766">B</WORD>
+                <WORD value="7362">C</WORD>
+                <WORD value="805">D</WORD>
+                <WORD value="768">E</WORD>
+                <WORD value="775">F</WORD>
+                <WORD value="773">G</WORD>
+                <WORD value="734">H</WORD>
+                <WORD value="755">I</WORD>
+                <WORD value="747">J</WORD>
+                <WORD value="739">K</WORD>
+                <WORD value="761">L</WORD>
+                <WORD value="792">M</WORD>
+                <WORD value="783">N</WORD>
+                <WORD value="753">O</WORD>
+                <WORD value="803">P</WORD>
+                <WORD value="783">Q</WORD>
+                <WORD value="758">R</WORD>
+                <WORD value="748">S</WORD>
+                <WORD value="796">T</WORD>
+                <WORD value="813">U</WORD>
+                <WORD value="764">V</WORD>
+                <WORD value="752">W</WORD>
+                <WORD value="787">X</WORD>
+                <WORD value="786">Y</WORD>
+                <WORD value="734">Z</WORD>
+            </ATTRB>
+        </CONVERT_METHOD>
+        <SYMBOL>
+            <LINE_START>16000</LINE_START>
+            <ORDER_ATTRB_START>0</ORDER_ATTRB_START>
+            <IO_START>1</IO_START> <!--Optional tag use it when io=2 read 0 Input before output, 1 output before input -->
+            <START_OUT>-1</START_OUT>
+            <STOP_OUT>,</STOP_OUT>
+            <START_INP>-1</START_OUT>
+            <STOP_INP>,</STOP_INP>
+        </SYMBOL>
+    </FILE>
+</INPUT>

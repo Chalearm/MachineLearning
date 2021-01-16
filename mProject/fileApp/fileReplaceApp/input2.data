@@ -1,0 +1,139 @@
+/* ABA */
+#ifndef _STATISDATALOG_H
+#define _STATISDATALOG_H
+#include <stdlib.h>
+#include "simMatDouble.h"
+#include "avlTree.h"
+#include "listPvoid.h"
+
+struct statisDataLogElement
+{
+    int indexDim;
+    char typeStatus;
+};
+struct statDataLogEleArr
+{
+    struct statisDataLogElement *m_data;
+    int m_num;
+};
+/** this is data of m_redundantTree */
+struct redundantData
+{
+    void *m_nodeOrigin;
+    int m_numRedunt;
+    binaryTree m_treeOfRedunEle; 
+    /* key is statDataLogEleArr ,
+       data is the number of keys that has same value
+    */
+};
+
+/* for filling value to some elements */
+struct statisDataLog
+{
+    void *whichDataSet; /* point to the buffer to keep the data set */
+    /* 
+        -1 is reject this sample
+        0 is mean
+        1 is median
+        2 is mod
+        3 is random (double)
+        4 is random (int)
+        5 is maximum
+        6 is minimum
+    */
+    int m_totalOfRedunNode;
+    int m_totalOfDiscardInsNode;
+    int m_totalOfInconsistNode;
+    binaryTree m_redundantTree;
+    binaryTree m_discardInsTree;
+    binaryTree m_inconsistTree;
+    binaryTree m_avlTree;
+    void* lastNode; /* keep last node which is returned */
+ 
+};
+
+typedef struct statisDataLogElement statisDataLogElement;
+typedef struct statisDataLog statisDataLog;
+typedef struct statDataLogEleArr statDataLogEleArr;
+typedef struct redundantData redundantData;
+/* statisDataLogElement method */
+void constructSdlEle(statisDataLogElement *obj);
+int setValueOfStatisDataLogElement(statisDataLogElement *obj,int indexDim,char typeStatus);
+int copyValueOfStatisDataLogElement(statisDataLogElement *obj1,statisDataLogElement *obj2);
+/* end of statisDataLogELement */
+/* statDataLogEleArr method */
+void constructorStatDataLogEleArr(statDataLogEleArr *obj);
+int setArrSizeOfStatDataLogEleArr(statDataLogEleArr *obj,int size);
+int setValToStatDataLogEleArr(statDataLogEleArr *obj,statisDataLogElement* data,int size);
+void makeEmptyStatDataLogEleArr(statDataLogEleArr *obj);
+int getSizeArrOfStatDataLogEleArr(statDataLogEleArr *obj);
+char getStatusFromStatDataLogEleArr(statDataLogEleArr *obj,int index);
+/* end of statDataLogEleArr method*/
+
+/* redundantData method */
+int compStatDatLogArrForStatisLog(const void* a,const void *b);
+void* newRedundantData(void *nodeAddress);
+void constructRedundantData(redundantData *obj,void *nodeAddress);
+int newTreeInRedundantData(redundantData *obj,void *key);
+void delStatisDataLogEleArrKeyOfRedundantNode(void *key);
+void deleteCounterOfRedundantNode(void *data);
+void constructAvlTreeRedundantData(binaryTree *obj);
+void deleteRedundantData(void *obj);
+void deleteKeyRedundant(void *obj);
+/* end redundantData method */
+
+/* redundantElement Tree method */
+int compVDoubleForStatisLog(const void* a,const void *b);
+void constructRedundantTree(binaryTree *obj);
+int putNodeToRedundantTree(binaryTree *obj,void *node);  /* create redundantElement node */
+void* newNodeForRedundatTree(binaryTree *obj,vector_double *key,redundantData *redDatObj);
+int reduceRedundantList(binaryTree *obj);
+void deleteRedundantEle(void *data);
+
+/*
+4 bits for returning
+high 2 bits 
+return  0 new value 
+           1 has in main tree
+           2 has in redundant tree
+           3 has in inconsist tree
+return  0 insert in main tree
+           1 insert in redundan tree
+           2 insert in inconsist tree
+           3 insert in discard tree
+*/
+int searchAllTreeForStatisDataLog(statisDataLog* statisDataLogObj,vector_double *sample);
+int deleteNodeOfStatisTreeForStatisDataLog(statisDataLog* statisDataLogObj,void *node,vector_double **sample,statDataLogEleArr **arr);
+int redundantKeepingProcessForStatisDataLog(statisDataLog* statisDataLogObj,void *node,vector_double *sample,statisDataLogElement *statEle,int numEle);
+/* end redundantElement Tree method */
+
+/* set of method for configuration AVL tree */
+void printKeyAvlTreeInStatisDataLog(void* key,char* buff);
+void deleteDataOfNodeForAvlTreeInStatisDataLog(void *data);
+void constructAVLTreeForStatisDataLog(binaryTree* tree);
+vector_double* getSampleToAvlNodeInStatisDataLog(void *node);
+statDataLogEleArr* getStatDataLogEleArrFromNodeAvlTreeInStatisDataLog(void *node);
+/* end set of method for configuration AVL tree */
+void constructorStatisDataLog(statisDataLog* statisDataLogObj);
+void makeStatisDataLogEmpty(statisDataLog* statisDataLogObj);
+void* newAVlNodeForStatisDataLog(statisDataLog *obj,vector_double *key,statisDataLogElement *statEle,int numEle);
+/* insert data to list */ 
+int addDataToStatisDataLog(statisDataLog* statisDataLogObj,vector_double *sample,statisDataLogElement *statEle,int numEle);
+
+    /* statisDataLog */ 
+    int allocatStatisDataLogArray(statisDataLog** statisDataLogObj,int num);
+    int deallocatStatisDataLogArray(statisDataLog** statisDataLogObj,int num);
+    int getNumOfDataInStatisDataLog(statisDataLog* statisDataLogObj);
+
+
+       /* not yet */
+    int sortDataInDoubleSet(matrix_double* doubleMat,statisDataLog* statisDataLogObj);
+    /* statisDataLog */
+    /* For statisDataLog only*/
+    int reorderDataOfStatisDataLog(statisDataLog* statisDataLogObj,int numArray,void** indexSam,void** indexAttrb,void** typeStatus);
+    int getAddressOfStatisDataEleForStatisDataLog(statisDataLog* statisDataLogObj,int indexSample,void** addrIndex,void ** addrIndexAttrb,void** addrTypeStatus);
+    void resetCurrentPointerOfStatisDataLog(statisDataLog* statisDataLogObj);
+
+
+    void printStatisDataLog(statisDataLog* statisDataLogObj,matrix_double* dataPrint);
+#endif /* _STATISDATALOG_H */

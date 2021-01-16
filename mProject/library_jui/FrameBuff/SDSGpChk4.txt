@@ -1,0 +1,110 @@
+﻿EXECUTIVE SUMMARY
+1.1	Purpose
+For the first version of this document, an author pays any attention to present a scope, feasibility or limitation of design an application that is known as Graphical checker application. Furthermore, the author would like to any reader understand and realize an importance of implementation the application and design document including giving a comment or a feedback to update this design document that will impact on the implementation the software in the feature.
+1.2	Intended Audience
+This system design specification is intended to be read by:
+•	Software designers 
+•	Software developers
+•	Software testers
+•	Anyone who works for and directly related with ERTMS P8 DMI project and would like to know what and how graphical checker application is.
+The author assumes that the reader has knowledge from basic to proficient of the software development. Below shows what the knowledge that reader should be has:
+
+•	Software designers 
+•	C/C++ programming language
+•	Linux programming
+•	Network programming
+•	Common SW data structures & algorithms
+Driver Machine Interface (DMI) and Man-machine Interface (MMI) product
+All of these items may be used without further references to their definition. All of these items may be used without further references to their definition.
+1.3	How to read this Document
+This document provides the design information for 3 chapters following detail below.
+In the first chapter, this part describes the basic information of reading the document including Purpose, reference, Abbreviations, Definitions and Terminologies. For the second chapter, it is the overview of Graphical checker application such as what is it and how is it in briefly. It gives a small number of jargons so as to normal readers are able to comprehensive easily. In The third chapter, this provides the detail in-depth of abstract and technical design the application.
+
+1.4 References
+1.4.1	Standards
+The following table lists all Standards which are applicable for this document.
+Ref.	Document Title	Document Number	Rev
+[1]		ERTMS Unit – ETCS Driver Machine Interface	ERA_ERTMS_015560	3.4.0
+
+1.4.2	Project Documents
+Ref.	Document Title	Document Number	Rev
+[2]		EBI Cab 2000 DMI Requirement Specification Generic ETCS Functionality BL-3	1DOC-1003869	2.1
+1.5	Abbreviations, Definitions and Terminologies   
+Abbreviations
+Abbreviation	Description
+DMI	Driver Machine Interface
+ERTMS	European Rail Traffic Management System
+ETC	European Train Control System
+EVC	European Vital Computer
+FS	Full Supervision
+MMI	Man-Machine Interface
+OS	Operating System
+TCP	Transmission Control Protocol
+X11	X Window System Version. 11
+1.5.1	Definitions
+Term	Description
+Daemon	It is a type of program on Unix-like operating systems that runs unobtrusively in the background, rather than under the direct control of a user, waiting to be activated by the occurance of a specific event or condition.
+Fetch	In this document, it is accessing Frame buffer area and then getting a picture to process.
+Fork	It is an operation whereby a process creates a copy of itsefl.
+Session ID	The session ID of a session equals the process ID of the first member of the session, called the session leader. When the precess is created, it becomes a member of the session of its parent.
+
+
+2	OVERVIEW
+Graphical Checker application is an application which is running on  DMI OS independently without controlling by DMI application. In displaying a picture on a screen, the DMI application has to show graphical information correctly, for example, while a train is running, Speedometer always shows the current speed as speed pointer that points to the circle scale and speed digital that is at the speed hub on the screen included showing mode symbol and some text correctly. To guarantee the picture on the screen, Graphical Checker application have been decided to do the functionality: verifying the picture on the screen and report the result of the validation to DMI application via TCP communication.
+Moreover, Graphical Checker application is running in the background or we cannot see anything about action on the screen. It is not depend on X11 application which handle displaying a picture on DMI screen, however, it can get a picture on the screen by reading back method via Framebuffer device. It can be called  “service application” or “service process”. In the context of Linux distribution, the processes is called “daemon”. Below display diagrams of applications related with Graphical Checker Application.
+For start-up Graphical Checker application, it can be done by DMI application or DMI OS configuration file that will be working when DMI machine turned on. In case of start-up by DMI application, after DMI OS starts up DMI application, DMI application will call a script to load Graphical Checker application. In case of start-up by DMI OS, it is separated absolutely and independently from DMI application. It is still alive even if DMI application is failed. Moreover, for this case, DMI OS have to be updated to support this feature. Updating DMI OS will affect many things in Generic product level. Therefore, choosing the way to start-up the application by DMI application is a good way.
+2.1	 Limitation and Constraint
+This section is useful to analyse how to make the application has a good performance. There are a few subjects considered to be constraint and limitation of design and implementing the application. They are based on the Hardware that is used for ERTMS P8C project including its some requirements.  
+Limitation of Hardware
+PIXY-INC90 is a computer whose CPU, RAM and ROM are restricted in quite low specification. CPU's speed is 800 MHZ with one core, RAM capacity is 1GB and ROM capacity is 4GB. For ROM, it is not considered because of 4GB which is enough to use. However,when DMI application is running in which FS mode is displayed, 99% - 100% of CPU time is performed. That means almost every time DMI application has to process something. Furthermore, 57% (2.3 GB) of ROM capacity is used to stored OS files and DMI application and 27% of RAM (277 MB) is used whille DMI application running. This is noticed that RAM and ROM are able to be ignored because of space that is enough to keep many thing wheather running any application or storing something. For CPU timer, this should be careful for designing Graphical Checker application. The application should use time to process a picture as short as it can. Each instruction of code on a line should be simple to excute.
+Constraint of requirements
+From the requirements[2] : 7.9 Start-Up and Restart Synchronisation , every EVC-102 packet must be sent to ETC at least each 250 millisecond. So, Graphical Checker application has process time to verify 3 parts of the pictures on a screen that is less than 250 millisecond. In addition, from the requirements[2] : 4 Requirements on Safety Procedures, many sub-chapter tells the application shall have a precalculated list of 32-Bit CRCs. Both of 4.1 Display of correct technical ETCS Mode (SIL0 DMI) and 4.4 Correct Display of Text Message “LX not protected” (SIL0 DMI) are possible to make a list by calculating all possible values then keeping them in a file. But, for 4.6 Correct Display of Currect Speed (SIL0 DMI), a list containing pixels coordinates is depended on DMI configuration file because Speedometer can be adjusted parameters such as maximum speed, minimum speed angle, maximum speed angle and so on. Therefore, every time Graphical Checker application is launched , DMI application has to send the detail about Speedometer to it to calculate the list before beginning verification of current speed. 
+Data set file size : from the requirement, Speed digital precaluated list of 32 bits CRCS is the bigest. The detail below shows how size it is.
+ Height of area centered in the center of B1 that is 21 cells multiply by scale value 1.5 pixel per cell is about 32 pixels  or 32 rows. There are 5 different possible colours : white, grey, yellow, orange, red. And maximum speed defined in ERA standard [1] is 600 km/hr. Size of CRC is 32 bits of 4 bytes.
+So, the size of the list is 32x5x600x4 or 384000 bytes or 375 kilobytes. Even if all data sets is equal to this. It does not matter to concern.
+
+    
+Currently, Our product used for ERTMS P8C project is PIXY-INC90 series. There are
+following detail :
+CPU : 
+While Graphical Checker is doing verification task on a picture, DMI application is drawing a
+picture together handling communication between itself and ATP. This can be observed
+that DMI application comsume the most CPU resources, for instance, rendering a picture
+on the screen: Speedometer, Planning information Distance to target and etc or handling
+messages used to talk with ATP. Therefore, we have to design this application to use the
+small number of CPU resouces . In another view, the application has to use CPU to
+process something in short period
+2.2	Dependencies
+Before implementing the application, there are some environments required. First, in compiling the set of codes to build the application, GNU compiler(GCC/G++) is only compiler that can work. So, the application is able to run on the OS base on Linux kernel only. And, It will work well if it is used in DMI OS. Next, If a platform that is used for implementation do not has Frame buffer device driver, the result of test running on the platform will failed. In addition, the version of Linux Kernel that is installed on the target and used for implementation should be 2.6.x or more. Finally, DMI application is the most important factor in running the application to test and get the result.
+3	FUNCTIONAL DESIGN
+Graphical Checker application provides display verification functionalities for 3 ETCS objects referred to [2]. Those objects include Speed needle and Speed digital, Mode icon on Area B7 and Text Message "LX not protected". The achitecture of the application is designed as server-client model. In another word,It is a service that provides some important information to DMI Application. The application always serves DMI application for a verification result only. Without DMI application,it is useless to be alive. In this chapter,  The detail of state of application, message and verify algorithm for 3 ETCS objects are revealed repespectively in more detail.
+Note: this desing does not include an optimization part for design and implementation a perfect application that gives a good performance because the first application should be implemented and tested on the real environment to see the result of performance and update this design in the next version.
+Initial state: For making a daemon
+First,after DMI application is started-up, DMI application calls Graphical Checker application by passing port number parameter and the absolute path of CRC-32bits data sets files.  Next, Graphical Checker application clones (fork) itself to create child process.  If forking of Graphical Checker application is successful, it will go die. So, its child process becomes orphan process. This is called “fork off”. Next,the process sets parameter to able to be write a report to logs because the application is not dependent on console and output on the screen.  Next,it send a request to kernel for a unique session id. Finally, the application move current of directory that is running to root path. In this time, the application becomes a daemon.
+TCP Establish state : For making a server
+The application use the port number from DMI application to establish a TCP server. If there is a Graphical Checker daemon that have been running since last calling of DMI application, the establishment will be failed because Linux kernel dosen’t allow to duplicate the port number. Therefore, the daemon is dead. In case of no Graphical Checker daemon, the establishment is successful. Except, the port number is not a unique port number.
+Pre –calculate state : For preparing the data set to verify the ETCS objects on a picture
+The daemon uses the absolute path to read the data sets and keep in a list area to use with Display of correct technical ETCS Mode, Correct Display of Currect Speed and Correct Display of Text Message “LX not protected”.  Finally, Frame buffer area is prepared to be ready to access.
+Moreover, between this state and “Ready and Idle” state, if DMI application sends a message about  speedometer parameter, the daemon will generates a list containing pixels coordinates. 
+Note: the method for generating the list is updated in the next version of document. 
+Ready and Idle state: For waiting an event from DMI application
+This state always waits any event  from DMI application. The daemon focuses on a message sent via TCP communication. In case of multithread, some task is slept.
+Fetch and Execute state: to verify and report the result to DMI application
+After, DMI application send a message to request the anwsers, the daemon fetches a picture to its area and starts verify the picture. Finally, those answers is sent via a TCP message to DMI application.
+3.2	Message
+The pattern of a message is made up of 2 parts. 
+
+
+For frist part, command header, its size is 1 byte to tell what it is. And, last part, it is a containing data.
+For example, when Graphic Checker application reads first byte and it is 5. It means this packet contains a port number and path directory of data sets files.
+Note : meaning of header part and the data part is described in Chapter 4.
+3.3	Verify algorithm
+Speedometer object
+the daemon starts with speed needle pointer by finding every group of consecutive points that should be a group. Next, speed digital is checked by starting with the anwser of speed needle and loop around all of the list.
+Mode icon and Text message
+For mode icon and text message, there are an easy way to verify by extracting each line from a picture and comparing with all data in a list begining with the previous anwser or first value.
+3.4	Diagnostics
+-
+3.5	Fault Reporting
+Any errors detected in Graphical Checker application are reported and logged in the DMI/MMI system based on its severity.
+4	MODULES DESIGN

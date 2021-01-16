@@ -1,0 +1,34 @@
+<ROOT>
+   <HEAD font=" angsana new" background="0x333f00" width="200">
+       <TITLE scale="1.6">Test Copy</TITLE>
+   </HEAD>
+   <BODY bgcolor="0xFF00FF" width="100" height="500">
+       <DIV no="67">
+           <FORM ok="yes"/>
+           <FORM>
+               <FAST>Slowly please</FAST>
+           </FORM>
+           <FORM ok="no" speed="99km/hr"/>
+       </DIV>
+       <DIV class='-1' size="big"/>
+       <DIV class="1">
+           <A href="www.ce.kmitl.ac.th" option="1.4">www.ce.kmitl.ac.th</A>
+           <SELECT>
+               <BOOK value="-32.12344599">exponential</BOOK>
+               <BOOK opt="2.3"></BOOK>
+               <JJ ok=' ' kk=" "> </JJ>
+               <MAIN_ELE id="13" no="2">
+                   <SUB_ELEMENT type="1" lv="0" id='2'>
+                       <JUI ok="yes">jui</JUI>
+                       <JUI ok="no">
+                           <LOVE id="333.32412131" color="0xFFFFFF">
+                               <JJ>Love you too much</JJ>
+                           </LOVE>
+                       </JUI>
+                   </SUB_ELEMENT>
+               </MAIN_ELE>
+           </SELECT>
+           <SELECT opt='23.54' live="Thailand"/>
+       </DIV>
+   </BODY>
+</ROOT>

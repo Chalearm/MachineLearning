@@ -1,0 +1,149 @@
+CC=gcc
+TARGET=main
+APATH=/ROOTPATH/mProject/library_jui
+
+APPPATH=${APATH}/tSMOKl1
+
+SRCPATH=${APPPATH}/src
+OBJPATH=${APPPATH}/obj
+LIBPATH=${APPPATH}/lib
+
+DATPATH=${APATH}/dataStruct
+DATSRC=${DATPATH}/src
+DATOBJ=${DATPATH}/obj
+DATLIB=${DATPATH}/lib
+
+XMLDIR=$(APATH)/XMLLibrary
+XMLIDIR=$(XMLDIR)/src
+XMLODIR=$(XMLDIR)/obj
+XMLLDIR=$(XMLDIR)/lib
+
+TREEPATH=${APATH}/TreeLib
+TSRCPATH=${TREEPATH}/src
+TOBJPATH=${TREEPATH}/obj
+TLIBPATH=${TREEPATH}/lib
+
+STRPATH=${APATH}/strLibrary
+STRSRCPATH=${STRPATH}/src
+STROBJPATH=${STRPATH}/obj
+STRLIBPATH=${STRPATH}/lib
+
+PREF1= $(TLIBPATH)/lib
+PREF2= $(LIBPATH)/lib
+PREF3= $(DATLIB)/lib
+PREF4= $(STRLIBPATH)/lib
+PREF5= $(XMLLDIR)/lib
+
+PREF6= -l
+
+_DEP0=$(TARGET)
+_DEP2=listPvoid
+_DEP3=simMatDouble
+_DEP4=dataTypeAndRoutineDefine
+_DEP5=binaryTree
+_DEP6=avlTree
+_DEP7=simString
+_DEP8=simMatChar
+_DEP9=simMat2
+_DEP10=setRealV
+
+DEP2=$(addsuffix .so,$(addprefix $(PREF3),$(_DEP2)))
+DEP3=$(addsuffix .so,$(addprefix $(PREF3),$(_DEP3)))
+
+DEP4=$(addsuffix .so,$(addprefix $(PREF1),$(_DEP4)))
+DEP5=$(addsuffix .so,$(addprefix $(PREF1),$(_DEP5)))
+DEP6=$(addsuffix .so,$(addprefix $(PREF1),$(_DEP6)))
+DEP7=$(addsuffix .so,$(addprefix $(PREF4),$(_DEP7)))
+DEP8=$(addsuffix .so,$(addprefix $(PREF5),$(_DEP8)))
+DEP9=$(addsuffix .so,$(addprefix $(PREF3),$(_DEP9)))
+DEP10=$(addsuffix .so,$(addprefix $(PREF3),$(_DEP10)))
+
+O0=$(addsuffix .o,$(addprefix $(OBJPATH)/,$(_DEP0)))
+O2=$(addsuffix .o,$(addprefix $(DATOBJ)/,$(_DEP2)))
+O3=$(addsuffix .o,$(addprefix $(DATOBJ)/,$(_DEP3)))
+O4=$(addsuffix .o,$(addprefix $(TOBJPATH)/,$(_DEP4)))
+O5=$(addsuffix .o,$(addprefix $(TOBJPATH)/,$(_DEP5)))
+O6=$(addsuffix .o,$(addprefix $(TOBJPATH)/,$(_DEP6)))
+O7=$(addsuffix .o,$(addprefix $(STROBJPATH)/,$(_DEP7)))
+O8=$(addsuffix .o,$(addprefix $(XMLODIR)/,$(_DEP8)))
+O9=$(addsuffix .o,$(addprefix $(DATOBJ)/,$(_DEP9)))
+O10=$(addsuffix .o,$(addprefix $(DATOBJ)/,$(_DEP10)))
+
+BR=$(DEP2)
+BR+=$(DEP3)
+BR+=$(DEP4)
+BR+=$(DEP5)
+BR+=$(DEP6)
+BR+=$(DEP7)
+BR+=$(DEP8)
+BR+=$(DEP9)
+BR+=$(DEP10)
+
+SRC0=$(addprefix $(SRCPATH)/,$(_DEP0))
+SRC2=$(addprefix $(DATSRC)/,$(_DEP2))
+SRC3=$(addprefix $(DATSRC)/,$(_DEP3))
+SRC4=$(addprefix $(TSRCPATH)/,$(_DEP4))
+SRC5=$(addprefix $(TSRCPATH)/,$(_DEP5))
+SRC6=$(addprefix $(TSRCPATH)/,$(_DEP6))
+SRC7=$(addprefix $(STRSRCPATH)/,$(_DEP7))
+SRC8=$(addprefix $(XMLIDIR)/,$(_DEP8))
+SRC9=$(addprefix $(DATSRC)/,$(_DEP9))
+SRC10=$(addprefix $(DATSRC)/,$(_DEP10))
+
+
+OBJ=$(_DEP2)
+OBJ+=$(_DEP3)
+OBJ+=$(_DEP9)
+OBJ+=$(_DEP6)
+OBJ+=$(_DEP5)
+OBJ+=$(_DEP4)
+OBJ+=$(_DEP7)
+OBJ+=$(_DEP8)
+OBJ+=$(_DEP10)
+OBJ+=m
+LOPT=$(addprefix $(PREF6),$(OBJ))
+CMD1= $(CC) $(CFLAGS) -L$(DATLIB) -L$(TLIBPATH) -L$(STRLIBPATH) -L$(XMLLDIR) -Wall -o $@ $< -I$(TSRCPATH) -I$(SRCPATH) -I$(STRSRCPATH) -I$(DATSRC) -I$(XMLIDIR)  $(LOPT)
+CMD2= $(CC) -shared -o $@ $<
+CMD3= $(CC) $(CFLAGS) -c -Wall -Werror -fpic $< -I$(TSRCPATH) -I$(SRCPATH) -I$(STRSRCPATH) -I$(DATSRC) -I$(XMLIDIR) -o $@
+$(TARGET):$(O0) $(BR)
+	$(CMD1)
+$(O0):$(SRC0).c
+	$(CMD3)
+$(O2):$(SRC2).c $(SRC2).h 
+	$(CMD3)
+ $(DEP2):$(O2)
+	$(CMD2) 
+$(O3):$(SRC3).c $(SRC3).h
+	$(CMD3)
+ $(DEP3):$(O3) 
+	$(CMD2)  
+$(O4):$(SRC4).c $(SRC4).h 
+	$(CMD3)
+ $(DEP4):$(O4)
+	$(CMD2)
+$(O5):$(SRC5).c $(SRC5).h
+	$(CMD3)
+ $(DEP5):$(O5)
+	$(CMD2)
+$(O6):$(SRC6).c $(SRC6).h 
+	$(CMD3)
+ $(DEP6):$(O6)
+	$(CMD2) 
+$(O7):$(SRC7).c $(SRC7).h
+	$(CMD3)
+ $(DEP7):$(O7) 
+	$(CMD2)  
+$(O8):$(SRC8).c $(SRC8).h 
+	$(CMD3) 
+$(DEP8):$(O8) 
+	$(CMD2)   
+$(O9):$(SRC9).c $(SRC9).h
+	$(CMD3)
+ $(DEP9):$(O9) 
+	$(CMD2)  
+$(O10):$(SRC10).c $(SRC10).h
+	$(CMD3)
+ $(DEP10):$(O10) 
+	$(CMD2)  
+clean :
+	rm main ${DATLIB}/*.* ${DATOBJ}/*.* ${LIBPATH}/*.* ${OBJPATH}/*.* ${XMLODIR}/*.* ${TOBJPATH}/*.* ${STROBJPATH}/*.* ${XMLLDIR}/*.* ${TLIBPATH}/*.* ${STRLIBPATH}/*.*

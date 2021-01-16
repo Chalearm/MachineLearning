@@ -1,0 +1,9 @@
+ADIR=/ROOTPATH/mProject
+SM2DIR=$(ADIR)/library_jui/dataStruct
+SM2IDIR=$(SM2DIR)/src
+main: main.o simMat2.o
+	gcc main.o simMat2.o -o main
+main.o: main.c
+	gcc -c -I$(SM2IDIR) main.c
+simMat2.o: $(SM2IDIR)/simMat2.h $(SM2IDIR)/simMat2.c
+	gcc -c $(SM2IDIR)/simMat2.c

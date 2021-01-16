@@ -1,0 +1,13 @@
+<INPUT_SPACE>
+    <CURRENT_PATH>dataConfig</CURRENT_PATH>
+    <FILE_NAME name="uci_carEval">uciCarEval/ds_mgr.xml</FILE_NAME>
+    <FILE_NAME name="uci_abalone">uciAbalone/ds_mgr.xml</FILE_NAME>
+    <FILE_NAME name="uci_breastCancerWdbc">uciBreastCancerWdbc/ds_mgr.xml</FILE_NAME>
+    <FILE_NAME name="uci_breastCancerWpbc">uciBreastCancerWpbc/ds_mgr.xml</FILE_NAME>
+    <FILE_NAME name="uci_breastCancerWisconsin">uciBreastCancerWisconsin/ds_mgr.xml</FILE_NAME>
+    <FILE_NAME name="uci_glass">uciGlass/ds_mgr.xml</FILE_NAME>
+    <FILE_NAME name="uci_wine">uciWine/ds_mgr.xml</FILE_NAME>
+    <FILE_NAME name="uci_vehicle">uciVehicle/ds_mgr.xml</FILE_NAME>
+    <FILE_NAME name="uci_adult">uciAdult/ds_mgr.xml</FILE_NAME>
+    <FILE_NAME name="uci_letterReg">uciLetterReg/ds_mgr.xml</FILE_NAME>
+</INPUT_SPACE>

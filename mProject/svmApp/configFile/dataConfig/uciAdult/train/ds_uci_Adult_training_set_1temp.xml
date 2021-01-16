@@ -1,0 +1,162 @@
+<INPUT>
+    <FILE type="0"><!-- 0 = training set 1 = testSet -->
+        <NAME_FILE io="2">/ROOT2/UCI/Adult/adult.data</NAME_FILE> <!-- io =0 input only, 1 output(label) only, 2 is Io -->
+        <NUM_SAMPLE>32561</NUM_SAMPLE>
+        <CONVERT_METHOD>  <!-- 0 string to int, 1 string to double, 2 map table, 3 random(double) 4 random(int) -->
+            <!-- *****for input which cannot regconizes,the sample is rejected immediately -->
+            <METHOD>1</METHOD> <!-- default method -->
+            <MISSING><!-- list element -->                        <!-- STATICS_VAL detail -->
+                <MISSING_WORD>?</MISSING_WORD>       <!---    -1 or no tag is ignore  (use value) -->
+                <STATICS_VAL opt="0">2</STATICS_VAL>              <!--      0 is mean, 1 is median, 2 mod,-->
+                <DEFAULT_VAL>1</DEFAULT_VAL>             <!--     3 random(double) , 4 random(int)  -->
+                <ATTRB_NUM availValue="0" type="0">1</ATTRB_NUM> <!--ATTRB_NUM is position of element in a point 0 to d-1 0 number, 1 floting -->
+                                                    <!-- opt in <STATICS_VAL>  -1 or no is set to be default.(0)
+                                                          It is used when there are 2 or more values of mode or median
+                                                          0 is mean them
+                                                          1 is random choose -->
+                                                    <!-- availValue = available value is using the value from input to replace a missing value-->
+                                                    <!-- use is 1 not use 0 -->
+            </MISSING>
+            <MISSING><!-- list element -->                       <!-- STATICS_VAL detail -->
+                <MISSING_WORD>?</MISSING_WORD>     <!---    -1 or no tag is ignore  (use value) -->
+                <STATICS_VAL>2</STATICS_VAL>            <!--      0 is mean, 1 is median, 2 mod,-->
+                <DEFAULT_VAL>1</DEFAULT_VAL>            <!--     3 random(double) , 4 random(int)  -->
+                <ATTRB_NUM type="0">6</ATTRB_NUM> <!--ATTRB_NUM is position of element in a point 0 to d-1 0 number, 1 floting -->
+            </MISSING>
+            <MISSING><!-- list element -->                        <!-- STATICS_VAL detail -->
+                <MISSING_WORD>?</MISSING_WORD>      <!---    -1 or no tag is ignore  (use value) -->
+                <STATICS_VAL>2</STATICS_VAL>              <!--      0 is mean, 1 is median, 2 mod,-->
+                <DEFAULT_VAL>1</DEFAULT_VAL>             <!--     3 random(double) , 4 random(int)  -->
+                <ATTRB_NUM type="0">13</ATTRB_NUM> <!--ATTRB_NUM is position of element in a point 0 to d-1 0 number, 1 floting -->
+            </MISSING>
+            <ATTRB method="2" type="1" no="1"><!-- type 1 = double , 0 is int -->
+                <WORD value="-4">Private</WORD>
+                <WORD value="-3">Self-emp-not-inc</WORD>
+                <WORD value="-2">Self-emp-inc</WORD>
+                <WORD value="-1">Federal-gov</WORD>
+                <WORD value="0">Local-gov</WORD>
+                <WORD value="1">State-gov</WORD>
+                <WORD value="2">Without-pay</WORD>
+                <WORD value="3">Never-worked</WORD>
+            </ATTRB>
+            <ATTRB method="2" type="1" no="3"><!-- type 1 = double , 0 is int -->
+                <WORD value="-8">Bachelors</WORD>
+                <WORD value="-7">Some-college</WORD>
+                <WORD value="-6">11th</WORD>
+                <WORD value="-5">HS-grad</WORD>
+                <WORD value="-4">Prof-school</WORD>
+                <WORD value="-3">Assoc-acdm</WORD>
+                <WORD value="-2">Assoc-voc</WORD>
+                <WORD value="-1">9th</WORD>
+                <WORD value="0">7th-8th</WORD>
+                <WORD value="1">12th</WORD>
+                <WORD value="2">Masters</WORD>
+                <WORD value="3">1st-4th</WORD>
+                <WORD value="4">10th</WORD>
+                <WORD value="5">Doctorate</WORD>
+                <WORD value="6">5th-6th</WORD>
+                <WORD value="7">Preschool</WORD>
+            </ATTRB>
+            <ATTRB method="2" type="1" no="5"><!-- type 1 = double , 0 is int -->
+                <WORD value="-3">Married-civ-spouse</WORD>
+                <WORD value="-2">Divorced</WORD>
+                <WORD value="-1">Never-married</WORD>
+                <WORD value="0">Separated</WORD>
+                <WORD value="1">Widowed</WORD>
+                <WORD value="2">Married-spouse-absent</WORD>
+                <WORD value="3">Married-AF-spouse</WORD>
+            </ATTRB>
+            <ATTRB method="2" type="1" no="6"><!-- type 1 = double , 0 is int -->
+                <WORD value="-7">Tech-support</WORD>
+                <WORD value="-6">Craft-repair</WORD>
+                <WORD value="-5">Other-service</WORD>
+                <WORD value="-4">Sales</WORD>
+                <WORD value="-3">Exec-managerial</WORD>
+                <WORD value="-2">Prof-specialty</WORD>
+                <WORD value="-1">Handlers-cleaners</WORD>
+                <WORD value="0">Machine-op-inspct</WORD>
+                <WORD value="1">Adm-clerical</WORD>
+                <WORD value="2">Farming-fishing</WORD>
+                <WORD value="3">Transport-moving</WORD>
+                <WORD value="4">Priv-house-serv</WORD>
+                <WORD value="5">Protective-serv</WORD>
+                <WORD value="6">Armed-Forces</WORD>
+            </ATTRB>
+            <ATTRB method="2" type="1" no="7"><!-- type 1 = double , 0 is int -->
+                <WORD value="-8">Wife</WORD>
+                <WORD value="-7">Own-child</WORD>
+                <WORD value="-8">Husband</WORD>
+                <WORD value="-7">Not-in-family</WORD>
+                <WORD value="-7">Other-relative</WORD>
+                <WORD value="-7">Unmarried</WORD>
+            </ATTRB>
+            <ATTRB method="2" type="1" no="8"><!-- type 1 = double , 0 is int -->
+                <WORD value="-2">White</WORD>
+                <WORD value="-1">Asian-Pac-Islander</WORD>
+                <WORD value="0">Amer-Indian-Eskimo</WORD>
+                <WORD value="1">Other</WORD>
+                <WORD value="2">Black</WORD>
+            </ATTRB>
+            <ATTRB method="2" type="1" no="9"><!-- type 1 = double , 0 is int -->
+                <WORD value="-1">Female</WORD>
+                <WORD value="1">Male</WORD>
+            </ATTRB>
+             <ATTRB method="2" type="1" no="13"><!-- type 1 = double , 0 is int -->
+                <WORD value="-20">United-States</WORD>
+                <WORD value="-19">Cambodia</WORD>
+                <WORD value="-18">England</WORD>
+                <WORD value="-17">Puerto-Rico</WORD>
+                <WORD value="-16">Canada</WORD>
+                <WORD value="-15">Germany</WORD>
+                <WORD value="-14">Outlying-US(Guam-USVI-etc)</WORD>
+                <WORD value="-13">India</WORD>
+                <WORD value="-12">Japan</WORD>
+                <WORD value="-11">Greece</WORD>
+                <WORD value="-10">South</WORD>
+                <WORD value="-9">China</WORD>
+                <WORD value="-8">Cuba</WORD>
+                <WORD value="-7">Iran</WORD>
+                <WORD value="-6">Honduras</WORD>
+                <WORD value="-5">Philippines</WORD>
+                <WORD value="-4">Italy</WORD>
+                <WORD value="-3">Poland</WORD>
+                <WORD value="-2">Jamaica</WORD>
+                <WORD value="-1">Vietnam</WORD>
+                <WORD value="0">Mexico</WORD>
+                <WORD value="1">Portugal</WORD>
+                <WORD value="2">Ireland</WORD>
+                <WORD value="3">France</WORD>
+                <WORD value="4">Dominican-Republic</WORD>
+                <WORD value="5">Laos</WORD>
+                <WORD value="6">Ecuador</WORD>
+                <WORD value="7">Taiwan</WORD>
+                <WORD value="8">Haiti</WORD>
+                <WORD value="9">Columbia</WORD>
+                <WORD value="10">Hungary</WORD>
+                <WORD value="11">Guatemala</WORD>
+                <WORD value="12">Nicaragua</WORD>
+                <WORD value="13">Scotland</WORD>
+                <WORD value="14">Thailand</WORD>
+                <WORD value="15">Yugoslavia</WORD>
+                <WORD value="16">El-Salvador</WORD>
+                <WORD value="17">Trinadad&ampTobago</WORD>
+                <WORD value="18">Peru</WORD>
+                <WORD value="19">Hong</WORD>
+                <WORD value="20">Holand-Netherlands</WORD>
+            </ATTRB>
+            <ATTRB method="2" type="1" no="14"><!-- type 1 = double , 0 is int -->
+                <WORD value="-1">&lt=50K</WORD>
+                <WORD value="1">&gt50K</WORD>
+             </ATTRB>
+        </CONVERT_METHOD>
+        <SYMBOL>
+            <LINE_START>0</LINE_START>
+            <ORDER_ATTRB_START>0</ORDER_ATTRB_START>
+            <IO_START>1</IO_START> <!--Optional tag use it when io=2 read 0 Input before output, 1 output before input -->
+            <START_OUT> </START_OUT>
+            <STOP_OUT>,</STOP_OUT>
+            <START_INP> </START_INP>
+            <STOP_INP>,</STOP_INP>
+        </SYMBOL>
+    </FILE>
+</INPUT>

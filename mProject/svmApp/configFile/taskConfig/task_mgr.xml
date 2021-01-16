@@ -1,0 +1,8 @@
+<ROOT>
+    <CURRENT_PATH>taskConfig</CURRENT_PATH>
+    <TASK use="1">task1.xml</TASK>
+    <TASK use="1">task2.xml</TASK>
+    <TASK use="1">task3.xml</TASK>
+    <TASK use="1">task4.xml</TASK>
+    <TASK use="1">task5.xml</TASK>
+</ROOT>

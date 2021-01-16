@@ -1,0 +1,5 @@
+gcc -c -Wall -Werror -fpic foo.c
+gcc -shared -o libfoo.so foo.o
+gcc -L/home/jui/../foo -Wall -o main main.c -lfoo
+export LD_LIBRARY_PATH=/home/jui/..
+./main

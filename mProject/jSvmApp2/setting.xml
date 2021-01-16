@@ -1,0 +1,51 @@
+<ROOT>
+
+    <!--
+        Print content :
+        
+    
+    -->
+    <PRNT_OPT val="12"/>
+    <SVM_MULTICLS val="0" /> <!-- 0 = 1-Vs-All, 1= 1-vs-1, 2 DAG-SVM -->
+    <!-- KERNEL SETTING -->
+     <!--  type: 0 linear, 1 poly nomial, 2 guassian radius, 3 sigmoid, (default == 2) -->
+     <!-- tryAll: 0 fixed, 1 loop to try every model during learning (like step of each kernel model) -->
+    <KERNEL_FN type="2" tryAll="1">   
+        <GAUSSIAN_VAL max="500" min="40"          step = "10" />  <!-- greater than or equal 0.0 -->
+        <POLYNOMIAL  max="30.123456789" min="2.34" offset="1" step = "3.4" />     <!-- greater than or equal 0.0, offset = (any) -->
+        <SIGMOID_VAL max="2.356" min="1.154"            step = "0.5321" />  <!-- greater than or equal 0.0,  -->
+        <!-- step is not minus and not over max -->
+    </KERNEL_FN>
+    
+    <SVM_PARM>
+
+        <SMO_WAY val="2"/> <!-- 0 = original smo, 1 = keerith M.1, 2 = keerith M.2, (default == 2)  -->
+        <C_SVM max="500" min="0.9" step="18.235475"/>    <!-- SMO Parameter -->
+        <TOLERANCE_PARAM val="0.00127"/> <!-- 0.1 to any so small (default = 0.001)-->
+        <ROUND_NUM_PARAM val="0.00000008"/> <!-- 0.1 to any so small (default = 0.00000001)-->
+        <ESP_PARAM val="0.000453"/> <!-- 0.1 to any so small (default = 0.001)-->
+    </SVM_PARM>
+    <PREPROCESS>
+        <K_FOLD max="4" min="1" step="3" />
+        <SCALE ok="0" />
+    </PREPROCESS>
+    
+    <DAT_HANDLE>
+        <!-- input data set -->
+        <NUM_DIMENSION>5</NUM_DIMENSION> <!-- not included output, 1 to any (default =3) -->
+        <!-- defaul nSam=100, percenNTrain="80.0" max=100" min="0" -->
+        <!-- the sum of percentNSam must be equal NUM_SAMPLE -->
+        <DAT_SET nSam="25" percentNTrain="87.32" max="1234.42" min="-234.231">
+        <!-- DIM is optional tag -->
+            <DIM max="202" min="32"/>  
+            <DIM max="203" min="33"/>
+            <DIM max="204" min="34"/>
+            <DIM max="687" min="421"/>
+        </DAT_SET>
+        <DAT_SET nSam="15" percentNTrain="56.7252" max="2000.57" min="1534.9875"/>
+        <DAT_SET nSam="10" percentNTrain="72.219" max="-234.54" min="-1234.121">
+            <DIM max="29.3407" min="-12.24"/>
+            <DIM max="329.3407" min="-412.24"/>
+        </DAT_SET>
+    </DAT_HANDLE>
+</ROOT>

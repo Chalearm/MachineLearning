@@ -1,0 +1,88 @@
+<ROOT>
+    <FILE_NAME>data1</FILE_NAME>
+    <NUM_CLASS>17</NUM_CLASS>
+    <NUM_ATTRB>26</NUM_ATTRB> <!-- only input , and output is 1 -->
+    <MAX_GOBAL>1000</MAX_GOBAL>
+    <MIN_GOBAL>-1000</MIN_GOBAL>
+    <NUM_REDUN>2006</NUM_REDUN>
+    <NUM_CONFLIC>5003</NUM_CONFLIC>
+    <NUM_SAMPLE>80040</NUM_SAMPLE>
+    <NUM_INCOMPLETE>1509</NUM_INCOMPLETE>
+    <DEFAULT_TYPE>discrete</DEFAULT_TYPE> <!-- continue or discrete -->
+    
+    <CLASS_DETAIL no="0"> <!-- 0 to NUM_CLASS-1 -->
+        <NUM_SAMPLE>4000</NUM_SAMPLE>
+        <REDUN_SAMPLE>5</REDUN_SAMPLE>
+        <MISS_SAMPLE>7</MISS_SAMPLE>
+        <ATTRB_DETAIL order="0"> <!-- 0 to NUM_ATTRB-1 -->
+            <MISS_RATE>4</MISS_RATE> <!-- probability to missing value(?) when randomization works 1% - 100%-->
+            <MAX>101</MAX>  <!-- local value (optional) -->
+            <MIN>1</MIN>  <!-- local value (optional) -->
+            <TYPE>continue</TYPE>
+            <MEDIAN_VALUE>51</MEDIAN_VALUE>
+            <MODE_VALUE>51</MODE_VALUE>
+        </ATTRB_DETAIL>
+        <ATTRB_DETAIL order="1"> <!-- 0 to NUM_ATTRB-1 -->
+            <MISS_RATE>1</MISS_RATE> <!-- probability to missing value(?) when randomization works 1% - 100%-->
+            <MAX>100</MAX>  <!-- local value (optional) -->
+            <MIN>-80</MIN>  <!-- local value (optional) -->
+            <TYPE>continue</TYPE>
+            <MEDIAN_VALUE>53</MEDIAN_VALUE>
+            <MODE_VALUE>-47</MODE_VALUE>
+        </ATTRB_DETAIL>
+        <ATTRB_DETAIL order="2"> <!-- 0 to NUM_ATTRB-1 -->
+            <MISS_RATE>20</MISS_RATE> <!-- probability to missing value(?) when randomization works 1% - 100%-->
+            <MAX>9</MAX>  <!-- local value (optional) -->
+            <MIN>-7</MIN>  <!-- local value (optional) -->
+            <TYPE>discrete</TYPE>
+            <MEDIAN_VALUE>1</MEDIAN_VALUE>
+            <MODE_VALUE>4</MODE_VALUE>
+        </ATTRB_DETAIL>
+        <ATTRB_DETAIL order="3"> <!-- 0 to NUM_ATTRB-1 -->
+            <MISS_RATE>36</MISS_RATE> <!-- probability to missing value(?) when randomization works 1% - 100%-->
+            <MAX>45</MAX>  <!-- local value (optional) -->
+            <MIN>-500</MIN>  <!-- local value (optional) -->
+            <TYPE>continue</TYPE>
+            <MEDIAN_VALUE>-111</MEDIAN_VALUE>
+            <MODE_VALUE>-37</MODE_VALUE>
+        </ATTRB_DETAIL>
+    </CLASS_DETAIL>
+    <CLASS_DETAIL no="1"> <!-- 0 to NUM_CLASS-1 -->
+        <NUM_SAMPLE>5000</NUM_SAMPLE>
+        <REDUN_SAMPLE>8</REDUN_SAMPLE>
+        <MISS_SAMPLE>35</MISS_SAMPLE>
+        <ATTRB_DETAIL order="0"> <!-- 0 to NUM_ATTRB-1 -->
+            <MISS_RATE>14</MISS_RATE> <!-- probability to missing value(?) when randomization works 1% - 100%-->
+            <MAX>60</MAX>  <!-- local value (optional) -->
+            <MIN>-150</MIN>  <!-- local value (optional) -->
+            <TYPE>continue</TYPE>
+            <MEDIAN_VALUE>-34</MEDIAN_VALUE>
+            <MODE_VALUE>-25</MODE_VALUE>
+        </ATTRB_DETAIL>
+        <ATTRB_DETAIL order="1"> <!-- 0 to NUM_ATTRB-1 -->
+            <MISS_RATE>11</MISS_RATE> <!-- probability to missing value(?) when randomization works 1% - 100%-->
+            <MAX>101</MAX>  <!-- local value (optional) -->
+            <MIN>-80</MIN>  <!-- local value (optional) -->
+            <TYPE>discrete</TYPE>
+            <MEDIAN_VALUE>53</MEDIAN_VALUE>
+            <MODE_VALUE>-47</MODE_VALUE>
+        </ATTRB_DETAIL>
+        <ATTRB_DETAIL order="2"> <!-- 0 to NUM_ATTRB-1 -->
+            <MISS_RATE>20</MISS_RATE> <!-- probability to missing value(?) when randomization works 1% - 100%-->
+            <MAX>9</MAX>  <!-- local value (optional) -->
+            <MIN>-7</MIN>  <!-- local value (optional) -->
+            <TYPE>discrete</TYPE>
+            <MEDIAN_VALUE>1</MEDIAN_VALUE>
+            <MODE_VALUE>4</MODE_VALUE>
+        </ATTRB_DETAIL>
+        <ATTRB_DETAIL order="3"> <!-- 0 to NUM_ATTRB-1 -->
+            <MISS_RATE>4</MISS_RATE> <!-- probability to missing value(?) when randomization works 1% - 100%-->
+            <MAX>48</MAX>  <!-- local value (optional) -->
+            <MIN>-50</MIN>  <!-- local value (optional) -->
+            <TYPE>continue</TYPE>
+            <MEDIAN_VALUE>-1</MEDIAN_VALUE>
+            <MODE_VALUE>-3</MODE_VALUE>
+        </ATTRB_DETAIL>
+    </CLASS_DETAIL>
+    
+</ROOT>
